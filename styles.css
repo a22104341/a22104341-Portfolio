@@ -1,12 +1,11 @@
 
 *{
-    cursor: url('../a22104341-Portfolio/cursor/normalCursor.gif'), default;
+    cursor: url('../a22104341-Portfolio/cursor/normalCursor.gif');
 }
 
 a{
     cursor: url('../a22104341-Portfolio/cursor/linkCursor.gif'), pointer;
 }
 
-body{
-    
-}
+
+
