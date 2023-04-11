@@ -1,11 +1,112 @@
 
 *{
-    cursor: url('../a22104341-Portfolio/cursor/normalCursor.gif');
+    cursor: url('../a22104341-Portfolio/cursor/normalCursor.gif'), default;
+    margin: 0;
+    padding: 0;
 }
 
 a{
     cursor: url('../a22104341-Portfolio/cursor/linkCursor.gif'), pointer;
 }
 
+body{
+    display: flex;
+
+    background-image: url("../a22104341-Portfolio/backgroundImage/1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    
+    /* TESTING PURPOSES */
+    height: 1000px;
+
+}
+
+header{
+    display: flex;
+    grid-area: header;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+main{
+    display: flex;
+    grid-area: main;
+    justify-content: center;
+
+
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: nav;
+
+    background-color: lightblue;
+    height: 80px;
+    width: 100vw;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(143, 203, 223, 0.377);
+
+    z-index: 100;
+    
+    position: sticky;
+    top: 0;
+
+    justify-content: space-evenly;
+}
+
+footer{
+    display: flex;
+    grid-area: footer;
+    justify-content: center;
+
+
+}
+
+
+@media(max-width: 600px){
+    .container{
+        display: grid;
+
+        grid-template-areas: 
+        'nav' 
+        'header'
+        'main'
+        'footer';
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 5fr 5fr 5fr;
+    }
+}
+
+@media(min-width: 601px){
+    .container{
+        display: grid;
+
+        grid-template-areas: 
+        'nav nav nav' 
+        'header header header'
+        'footer footer footer'
+        'main main main';
+
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 5fr 5fr 5fr;
+    }
+}
+
+nav .darkmode{
+    position: fixed;
+    right: 0;
+    margin-right: 10px;
+
+    
+}
 
 
