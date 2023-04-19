@@ -1,18 +1,41 @@
 
 *{
-    cursor: url('../a22104341-Portfolio/cursor/normalCursor.gif'), default;
     margin: 0;
     padding: 0;
 }
 
 a{
-    cursor: url('../a22104341-Portfolio/cursor/linkCursor.gif'), pointer;
+    animation: mouse_link 1s;
+    -o-animation: mouse_link 1s;
+    -ms-animation: mouse_link 1s;
+    -moz-animation: mouse_link 1s;
+    -webkit-animation: mouse_link 1s;
+
+    animation-iteration-count: infinite;
+}
+
+button{
+    animation: mouse_link 1s;
+    -o-animation: mouse_link 1s;
+    -ms-animation: mouse_link 1s;
+    -moz-animation: mouse_link 1s;
+    -webkit-animation: mouse_link 1s;
+
+    animation-iteration-count: infinite;
 }
 
 body{
+    animation: mouse_in 0.75s;
+    -o-animation: mouse_in 0.75s;
+    -ms-animation: mouse_in 0.75s;
+    -moz-animation: mouse_in 0.75s;
+    -webkit-animation: mouse_in 0.75s;
+
+    animation-iteration-count: infinite;
+
     display: flex;
 
-    background-image: url("../a22104341-Portfolio/backgroundImage/1.jpg");
+    background-image: url("backgroundImage/1.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -22,6 +45,25 @@ body{
     height: 1000px;
 
 }
+
+@keyframes mouse_in {
+    0% {cursor: url('cursor/1.png'), default;}
+    33% {cursor: url('cursor/2.png'), default;}
+    66% {cursor: url('cursor/3.png'), default;}
+    100% {cursor: url('cursor/4.png'), default;}
+}
+
+@keyframes mouse_link {
+    0% {cursor: url('cursor/5.png'), default;}
+    14.3% {cursor: url('cursor/6.png'), default;}
+    29% {cursor: url('cursor/7.png'), default;}
+    43.5% {cursor: url('cursor/8.png'), default;}
+    59% {cursor: url('cursor/9.png'), default;}
+    73% {cursor: url('cursor/10.png'), default;}
+    87% {cursor: url('cursor/11.png'), default;}
+    100% {cursor: url('cursor/12.png'), default;}
+}
+
 
 header{
     display: flex;
