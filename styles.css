@@ -1,10 +1,9 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-a{
+a {
     animation: mouse_link 1s;
     -o-animation: mouse_link 1s;
     -ms-animation: mouse_link 1s;
@@ -14,7 +13,7 @@ a{
     animation-iteration-count: infinite;
 }
 
-button{
+button {
     animation: mouse_link 1s;
     -o-animation: mouse_link 1s;
     -ms-animation: mouse_link 1s;
@@ -24,7 +23,7 @@ button{
     animation-iteration-count: infinite;
 }
 
-body{
+body {
     animation: mouse_in 0.75s;
     -o-animation: mouse_in 0.75s;
     -ms-animation: mouse_in 0.75s;
@@ -34,55 +33,86 @@ body{
     animation-iteration-count: infinite;
 
     display: flex;
+}
 
-    background-image: url("backgroundImage/1.jpg");
+.backgroundME{
+    background-image: url("backgroundImage/3.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     background-size: cover;
 
-    
-    /* TESTING PURPOSES */
-    height: 1000px;
-
+    height: 90vh;
 }
 
 @keyframes mouse_in {
-    0% {cursor: url('cursor/1.png'), default;}
-    33% {cursor: url('cursor/2.png'), default;}
-    66% {cursor: url('cursor/3.png'), default;}
-    100% {cursor: url('cursor/4.png'), default;}
+    0% {
+        cursor: url('cursor/1.png'), default;
+    }
+
+    33% {
+        cursor: url('cursor/2.png'), default;
+    }
+
+    66% {
+        cursor: url('cursor/3.png'), default;
+    }
+
+    100% {
+        cursor: url('cursor/4.png'), default;
+    }
 }
 
 @keyframes mouse_link {
-    0% {cursor: url('cursor/5.png'), default;}
-    14.3% {cursor: url('cursor/6.png'), default;}
-    29% {cursor: url('cursor/7.png'), default;}
-    43.5% {cursor: url('cursor/8.png'), default;}
-    59% {cursor: url('cursor/9.png'), default;}
-    73% {cursor: url('cursor/10.png'), default;}
-    87% {cursor: url('cursor/11.png'), default;}
-    100% {cursor: url('cursor/12.png'), default;}
+    0% {
+        cursor: url('cursor/5.png'), default;
+    }
+
+    14.3% {
+        cursor: url('cursor/6.png'), default;
+    }
+
+    29% {
+        cursor: url('cursor/7.png'), default;
+    }
+
+    43.5% {
+        cursor: url('cursor/8.png'), default;
+    }
+
+    59% {
+        cursor: url('cursor/9.png'), default;
+    }
+
+    73% {
+        cursor: url('cursor/10.png'), default;
+    }
+
+    87% {
+        cursor: url('cursor/11.png'), default;
+    }
+
+    100% {
+        cursor: url('cursor/12.png'), default;
+    }
 }
 
 
-header{
+header {
     display: flex;
     grid-area: header;
     justify-content: center;
     align-items: center;
-    
-    
+    font-weight: bold;
+    background-attachment: fixed;
 }
 
-main{
+main {
     display: flex;
     grid-area: main;
     justify-content: center;
-
-
 }
 
-nav{
+nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,14 +127,14 @@ nav{
     border-color: rgba(143, 203, 223, 0.377);
 
     z-index: 100;
-    
+
     position: sticky;
     top: 0;
 
     justify-content: space-evenly;
 }
 
-footer{
+footer {
     display: flex;
     grid-area: footer;
     justify-content: center;
@@ -112,43 +142,98 @@ footer{
 
 }
 
+.container .curso {
+    grid-area: curso;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-@media(max-width: 600px){
-    .container{
-        display: grid;
-
-        grid-template-areas: 
-        'nav' 
-        'header'
-        'main'
-        'footer';
-
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 5fr 5fr 5fr;
-    }
+    font-size: 35px;
 }
 
-@media(min-width: 601px){
-    .container{
-        display: grid;
+article.phrase {
+    display: flex;
+    grid-area: phrase;
 
-        grid-template-areas: 
-        'nav nav nav' 
-        'header header header'
-        'footer footer footer'
-        'main main main';
+    font-size: 20px;
 
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 5fr 5fr 5fr;
-    }
+    justify-content: center;
+
+    background-color: lightblue;
+
+    width: 450px;
+
+    height: 35vh;
+    background: lightblue;
+    padding: 0 4vw;
+    text-align: center;
+
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(143, 203, 223, 0.377);
+    z-index: 50;
+    margin-left: auto;
+    margin-right: auto;
+
+    position: absolute;
 }
 
-nav .darkmode{
-    position: fixed;
-    right: 0;
-    margin-right: 10px;
+article.phrase button {
+    height: 50px;
+    width: 110px;
+    
+    font-size: 20px;
+
+    border-color: aqua;
+    /*choose a better color */
+    background-color: green;
+    /*choose a better color */
+    border-radius: 5px;
 
     
 }
 
+article.qualities_etc {
+    height: 1000px;
+    background-image: url("backgroundImage/Austria.jpg");
+    background-repeat: no-repeat;
+     background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    align-items: start;
+    z-index: 10;
 
+}
+
+nav .darkmode {
+    position: fixed;
+    right: 0;
+    margin-right: 10px;
+}
+
+
+@media(max-width: 600px) {
+    .container {
+        display: grid;
+
+        grid-template-areas:
+            'nav'
+            'header'
+            'curso'
+            'phrase'
+            'main'
+            'footer';
+
+        grid-template-columns: 1fr;
+
+
+        background-image: url("backgroundImage/phone 3.png");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+    }
+
+    .container .curso {
+        font-size: 28px;
+    }
+}
