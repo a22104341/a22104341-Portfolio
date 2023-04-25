@@ -126,20 +126,72 @@ nav {
     border-width: 1px;
     border-color: rgba(143, 203, 223, 0.377);
 
-    z-index: 100;
+    z-index: 999;
 
     position: sticky;
     top: 0;
-
+    margin-left: 0;
+    margin-right: 0;
     justify-content: space-evenly;
 }
+/*dropDownStuff */
+.dropbtn {
+    background-color: lightblue;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f0ffff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    background-color: rgb(154, 194, 207);
+}
+
 
 footer {
     display: flex;
-    grid-area: footer;
     justify-content: center;
+    align-items: center;
+    grid-area: nav;
 
+    background-color: lightblue;
+    height: 60px;
+    width: 100vw;
 
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(143, 203, 223, 0.377);
+
+    z-index: 999;
+
+    position: relative;
+    bottom: 0;
+
+    justify-content: space-evenly;
 }
 
 .container .curso {
@@ -149,6 +201,7 @@ footer {
     align-items: center;
 
     font-size: 35px;
+    z-index: 0;
 }
 
 article.phrase {
@@ -171,11 +224,14 @@ article.phrase {
     border-style: solid;
     border-width: 1px;
     border-color: rgba(143, 203, 223, 0.377);
-    z-index: 50;
     margin-left: auto;
     margin-right: auto;
 
     position: absolute;
+    bottom: -170px;
+    right: 0;
+    left: 0;
+
 }
 
 article.phrase button {
@@ -190,27 +246,103 @@ article.phrase button {
     /*choose a better color */
     border-radius: 5px;
 
+    position: absolute;
+
+    bottom: 60px;
     
+} /* put in middle */
+
+nav .darkmode {
+    position: absolute;
+    right: 0;
+    margin-right: 35px;
 }
 
 article.qualities_etc {
     height: 1000px;
-    background-image: url("backgroundImage/Austria.jpg");
+    background-image: url("backgroundImage/Austria_White.png");
     background-repeat: no-repeat;
-     background-attachment: fixed;
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
     align-items: start;
-    z-index: 10;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+}
+/* progressBars */
+article.qualities_etc .progressBars{
+    box-sizing: border-box;
+    
 
 }
 
-nav .darkmode {
-    position: fixed;
-    right: 0;
-    margin-right: 10px;
+.progressBars .progressBar1{
+    position: relative;
+    width: 50%;
+    height: 2em;
+    background-color: white;
+    color: black;
+}
+.progressBar1::before{
+    content: attr(data-label);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: .25em;
+    top: .25em;
+    bottom: .25em;
+    width: calc(var(--width, 0) * 1%);
+    min-width: 2rem;
+    max-width: calc(100% - .5em);
+    background-color: lightblue;
+    padding: .005em;
+}
+.progressBars .progressBar2{
+    position: relative;
+    width: 50%;
+    height: 2em;
+    background-color: white;
+    color: black;
+}
+.progressBar2::before{
+    content: attr(data-label);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: .25em;
+    top: .25em;
+    bottom: .25em;
+    width: calc(var(--width, 0) * 1%);
+    min-width: 2rem;
+    max-width: calc(97% - .5em);
+    background-color: lightblue;
+    padding: .005em;
 }
 
+.progressBars .progressBar3{
+    position: relative;
+    width: 50%;
+    height: 2em;
+    background-color: white;
+    color: black;
+}
+.progressBar3::before{
+    content: attr(data-label);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: .25em;
+    top: .25em;
+    bottom: .25em;
+    width: calc(var(--width, 0) * 1%);
+    min-width: 2rem;
+    max-width: calc(40% - .5em);
+    background-color: lightblue;
+    padding: .005em;
+}
 
 @media(max-width: 600px) {
     .container {
@@ -222,18 +354,65 @@ nav .darkmode {
             'curso'
             'phrase'
             'main'
+            'skills'
             'footer';
 
         grid-template-columns: 1fr;
 
 
+        
+    }
+
+    .container .curso {
+        font-size: 28px;
+    }
+
+    .backgroundME{
         background-image: url("backgroundImage/phone 3.png");
         background-repeat: no-repeat;
         background-position: top;
         background-size: cover;
     }
 
-    .container .curso {
-        font-size: 28px;
+    article.qualities_etc {
+        height: 1000px;
+        background-image: url("backgroundImage/Austria_White.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        align-items: start;
+    
+        margin-left: auto;
+        margin-right: auto;
+    
+        text-align: center;
     }
-}
+
+} /* got a problem w the small background*/ /* PHONE VERSION, FOOTER ON TOP NOT SPOSED */
+
+/* nav animation while hovering */
+.dropdown {
+    display: inline-block;
+    position: relative;
+    color: rgb(124, 161, 173);
+  }
+.dropdown:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(124, 161, 173);
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+  }
+.dropdown:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
+

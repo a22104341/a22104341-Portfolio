@@ -3,6 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 
     <title>Diogo Rodrigues</title>
     <link rel="icon" href="images/UlmFlagge.png"> <!-- need a logo here-->
@@ -14,28 +15,44 @@
 
 <body>
     <div class="container">
+        <nav>
+            <div class="dropdown">
+                <button class="dropbtn">About me</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Intro</a>
+                    <a href="Education.html">Education</a>
+                    <a href="OtherStuffAbtMe.html">OtherStuff abt me ig?</a>
+                    <a href="Contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Projects</button>
+                <div class="dropdown-content">
+                    <a href="University.html">University</a>
+                    <a href="Personal.html">Personal</a>
+                    <a href="Interesting.html">Interesting (not made by me)</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Requested pelo enunciado</button>
+                <div class="dropdown-content">
+                    <a href="ProgWeb.html">Programação Web(labs / news)</a>
+                    <a href="StuffUsedWebsite.html">Stuff used on Website</a>
+                    <a href="JavaScriptPlayground.html">Javascript Playground</a>
+                </div>
+            </div>
+            <div class="darkmode">
+                <button>
+                    darkmode
+                </button>
+            </div>
+        </nav>
+
         <div class="backgroundME">
-
-
-            <nav>
-                <div>
-                    1
-                </div>
-                <div>
-                    2
-                </div>
-                nav
-                <div class="darkmode">
-                    <button>
-                        darkmode
-                    </button>
-                </div>
-            </nav>
-
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
             <header>
-                <p style="font-size: 50px;">Diogo Rodrigues</p>
+                <p style="font-size: 60px;">Diogo Rodrigues</p>
             </header>
 
             <br>
@@ -45,30 +62,63 @@
             </div>
 
         </div>
-        <article class="phrase">
-            <br><br><div>
-
-            
-            I am a second year Bachelors student in <br>
-            Computer Science Engineering.<br>
-
-            I like programming and enjoy video games,<br>
-            so I seek the opportunity to bridge the two. <br>
-            <button> Download Resume</button>
-        </article>
-
         <article class="qualities_etc">
-            <p style="font-size: 50px;font-weight: bold;">Professional</p>
-            a <br>
+            <article class="phrase">
+                <br><br>
+                <div>
+                    <br><br>
+                    I am a second year Bachelors student in <br>
+                    Computer Science Engineering.<br>
 
+                    I like programming and enjoy video games,<br>
+                    so I seek the opportunity to bridge the two. <br>
+                    <!-- scrap after this sentence for actual portfolio -->
+                    Which is why i chose this course and coincidentally also the most fun part about it.
+
+                    <button> Download Resume</button> <!-- THE BUTTON IS NOT CENTERED HOW I CENTER IT :,)-->
+            </article>
+
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <p style="font-size: 70px;font-weight: bold;">Professional</p>
+            <br>
+            <p style="font-size: 35px;font-weight: bold;color: rgba(0, 0, 0, 0.726);">Languages</p>
+            <br>
+            <button onclick="resetBas()">reset</button> <!-- CURRENTLY BROKEN add an r + I want the % to be on the right of the bar + i wanna center the bar-->
+            <div class="progressBars" onmouseover="barMovements()"> <!-- Why does the bar move very fast sometimes and other times slow? -->
+                <div class = "progressBar1" style="--width: 1"data-label="German"></div>
+                <div class = "percentage" style="opacity: 0; font-weight: bold;">100%</div>
+                <br>
+                <div class = "progressBar1" style="--width: 1"data-label="Portuguese"></div>
+                <div class = "percentage" style="opacity: 0; font-weight: bold;">100%</div>
+                <br>
+                <div class = "progressBar2" style="--width: 1"data-label="English"></div>
+                <div class = "percentage" style="opacity: 0; font-weight: bold;">97%</div>
+                <br>
+                <div class = "progressBar3" style="--width: 1"data-label="French"></div>
+                <div class = "percentage" style="opacity: 0; font-weight: bold;">40%</div>
+            </div>
+
+            <br><br>
+            <p style="font-size: 35px;font-weight: bold;color: rgba(0, 0, 0, 0.726);">Programming Languages</p>
+            <!-- IS THE IMAGE TOO SMALL TO GET WHICH LANGUAGE IT IS???-->
+            Java<img src="LanguageSymbols/java.png" style="height: 37px;position: relative;bottom: -5px;"> | JavaScript<img src="LanguageSymbols/JavaScript.png" style="height: 29px;position: relative;bottom: -5px;"> | <img src="LanguageSymbols/c.png" style="height: 27px;position: relative;bottom: -5px;">  | <img src="LanguageSymbols/csharp.png"  style="height: 27px;position: relative;bottom: -5px;"> <br>
+             SQL | Kotlin <img src="LanguageSymbols/kotlin.png" style="height: 22px;position: relative;bottom: -5px;"> | Python <img src="LanguageSymbols/python.png" style="height: 24px;position: relative;bottom: -5px;"> | Assembly
+            <br><br><br>
+            <p style="font-size: 35px;font-weight: bold;color: rgba(0, 0, 0, 0.726);">Other</p>
+            HTML<img src="LanguageSymbols/html.png" style="height: 27px;position: relative;bottom: -5px;"> | CSS <img src="LanguageSymbols/css.png" style="height: 27px;position: relative;bottom: -5px;">
+            
         </article>
-        <br>
 
 
 
 
         <footer>
-            feet
+            <div>linkTO-MapSite</div>
+            <div>contact</div>
+            <div>LinkedIN</div>
+            <div>github</div>
+            <div>2023</div>
+            <div><img src="Lusofona Logo/lusofona.png" style="height: 28px;"></div>
         </footer>
     </div>
 </body>
