@@ -176,7 +176,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    grid-area: nav;
+    grid-area: footer;
 
     background-color: lightblue;
     height: 60px;
@@ -376,6 +376,7 @@ article.qualities_etc .progressBars{
 
     article.qualities_etc {
         height: 1000px;
+        width: 100%;
         background-image: url("backgroundImage/Austria_White.png");
         background-repeat: no-repeat;
         background-attachment: fixed;

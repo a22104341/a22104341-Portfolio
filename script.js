@@ -85,7 +85,6 @@ function barMovement3(){
             progressBar.style.setProperty("--width", width + .1)
     }, 7)
 }
-
 function barMovements(){
     barMovement()
     barMovement1()
@@ -95,15 +94,22 @@ function barMovements(){
 }
 
 
-function resetBar(){ /*fix this somehow */
+function resetBar(){ /*fix this somehow */ /* THIS WORKS */
+// Get a reference to the last interval + 1
+const interval_id = window.setInterval(function(){}, Number.MAX_SAFE_INTEGER);
+
+// Clear any timeout/interval up to that id
+for (let i = 1; i < interval_id; i++) {
+  window.clearInterval(i);
+}
     const progressBar = document.getElementsByClassName
     ("progressBar1")[0]
-    setInterval(() => {
+
         const computedStyle = getComputedStyle(progressBar)
         const width = parseFloat(computedStyle.getPropertyValue
             ("--width")) || 0
             progressBar.style.setProperty("--width", computedStyle)
-    })
+
 }
 function resetBar1(){ /*fix this somehow */
     const progressBar = document.getElementsByClassName
@@ -135,10 +141,13 @@ function resetBar3(){ /*fix this somehow */
             progressBar.style.setProperty("--width", computedStyle)
     })
 }
-
 function resetBars(){
     resetBar()
     resetBar1()
     resetBar2()
     resetBar3()
+}
+
+function darkLightMode(){
+    
 }
