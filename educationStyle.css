@@ -1,8 +1,8 @@
-/* GENERAL PURPOSE FROM INDEX PAGE */
 * {
     margin: 0;
     padding: 0;
 }
+
 a {
     animation: mouse_link 1s;
     -o-animation: mouse_link 1s;
@@ -12,6 +12,7 @@ a {
 
     animation-iteration-count: infinite;
 }
+
 button {
     animation: mouse_link 1s;
     -o-animation: mouse_link 1s;
@@ -21,6 +22,7 @@ button {
 
     animation-iteration-count: infinite;
 }
+
 body {
     animation: mouse_in 0.75s;
     -o-animation: mouse_in 0.75s;
@@ -30,8 +32,8 @@ body {
 
     animation-iteration-count: infinite;
 
-    display: flex;
 }
+
 .backgroundME{
     background-image: url("backgroundImage/3.png");
     background-repeat: no-repeat;
@@ -40,6 +42,7 @@ body {
 
     height: 90vh;
 }
+
 @keyframes mouse_in {
     0% {
         cursor: url('cursor/1.png'), default;
@@ -57,6 +60,7 @@ body {
         cursor: url('cursor/4.png'), default;
     }
 }
+
 @keyframes mouse_link {
     0% {
         cursor: url('cursor/5.png'), default;
@@ -90,6 +94,8 @@ body {
         cursor: url('cursor/12.png'), default;
     }
 }
+
+
 header {
     display: flex;
     grid-area: header;
@@ -98,11 +104,14 @@ header {
     font-weight: bold;
     background-attachment: fixed;
 }
+
 main {
     display: flex;
     grid-area: main;
     justify-content: center;
+    height: 1000px;
 }
+
 nav {
     display: flex;
     justify-content: center;
@@ -111,7 +120,7 @@ nav {
 
     background-color: lightblue;
     height: 80px;
-    width: 100%;
+    width: 100vw;
 
     border-style: solid;
     border-width: 1px;
@@ -120,10 +129,9 @@ nav {
     z-index: 999;
 
     position: sticky;
+    top: 0;
     margin-left: 0;
     margin-right: 0;
-    top: 0;
-
     justify-content: space-evenly;
 }
 /*dropDownStuff */
@@ -162,6 +170,8 @@ nav {
 .dropdown:hover .dropbtn {
     background-color: rgb(154, 194, 207);
 }
+
+
 footer {
     display: flex;
     justify-content: center;
@@ -239,7 +249,6 @@ article.phrase button {
     position: absolute;
 
     bottom: 60px;
-    margin-left: -10%;
     
 } /* put in middle */
 
@@ -269,6 +278,7 @@ article.qualities_etc .progressBars{
     
 
 }
+
 .progressBars .progressBar1{
     position: relative;
     width: 50%;
@@ -333,6 +343,7 @@ article.qualities_etc .progressBars{
     background-color: lightblue;
     padding: .005em;
 }
+
 @media(max-width: 600px) {
     .container {
         display: grid;
@@ -365,6 +376,7 @@ article.qualities_etc .progressBars{
 
     article.qualities_etc {
         height: 1000px;
+        width: 100%;
         background-image: url("backgroundImage/Austria_White.png");
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -377,7 +389,9 @@ article.qualities_etc .progressBars{
     
         text-align: center;
     }
+
 } /* got a problem w the small background*/ /* PHONE VERSION, FOOTER ON TOP NOT SPOSED */
+
 /* nav animation while hovering */
 .dropdown {
     display: inline-block;
@@ -402,4 +416,4 @@ article.qualities_etc .progressBars{
   }
 
 
-/*                            HERE THE NEW STUFF STARTS                          */
+
