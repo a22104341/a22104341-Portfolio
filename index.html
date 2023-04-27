@@ -13,20 +13,20 @@
     <meta name="keywords" content="portfolio">
 </head>
 
-<body>
+<body id="body">
     <div class="container">
-        <nav>
+        <nav id="nav">
             <div class="dropdown">
-                <button class="dropbtn">About me</button>
+                <button class="dropbtn" id = "dropbtn">About me</button>
                 <div class="dropdown-content">
-                    <a href="index.html">Intro</a>
-                    <a href="Education.html">Education</a>
-                    <a href="OtherStuffAbtMe.html">OtherStuff abt me ig?</a>
-                    <a href="Contact.html">Contact</a>
+                    <a href="index.html"id="dropdown-content">Intro</a>
+                    <a href="Education.html"id="dropdown-content1">Education</a>
+                    <a href="OtherStuffAbtMe.html"id="dropdown-content2">OtherStuff abt me ig?</a>
+                    <a href="Contact.html"id="dropdown-content3">Contact</a>
                 </div>
             </div>
             <div class="dropdown">
-                <button class="dropbtn">Projects</button>
+                <button class="dropbtn" id = "dropbtn1">Projects</button>
                 <div class="dropdown-content">
                     <a href="University.html">University</a>
                     <a href="Personal.html">Personal</a>
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="dropdown">
-                <button class="dropbtn">Requested pelo enunciado</button>
+                <button class="dropbtn" id = "dropbtn2">Requested pelo enunciado</button>
                 <div class="dropdown-content">
                     <a href="ProgWeb.html">Programação Web(labs / news)</a>
                     <a href="StuffUsedWebsite.html">Stuff used on Website</a>
@@ -43,13 +43,13 @@
                 </div>
             </div>
             <div class="darkmode">
-                <button style="background-color: transparent;border-width: 0;">
-                    <img src="darkmodeImage/darkmode.png" style="height: 25px;">
+                <button onclick="darkLightMode()" style="background-color: transparent;border-width: 0;">
+                    <img id ="darkLight" src="darkmodeImage/darkmode.png" style="height: 25px;">
                 </button>
             </div>
         </nav>
 
-        <div class="backgroundME">
+        <div class="backgroundME" id = "backgroundME">
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
             <header>
@@ -63,8 +63,8 @@
             </div>
 
         </div>
-        <article class="qualities_etc">
-            <article class="phrase">
+        <article class="qualities_etc" id="qualities_etc">
+            <article class="phrase" id = "phrase">
                 <br><br>
                 <div>
                     <br><br>
@@ -75,37 +75,37 @@
                     so I seek the opportunity to bridge the two. <br>
                     <!-- scrap after this sentence for actual portfolio -->
                     Which is why i chose this course and coincidentally also the most fun part about it.
-
-                    <button> <a href="" download="DiogoRodrigues-Resume.pdf" style="text-decoration: none;">Download Resume</a></button>
+                    <br><br><br>
+                    <button style="background-color: black;" id = "phraseButton"> <a href="CV_[EN].pdf" id = "phraseButtonText" download="Diogo Rodrigues-Resume.pdf" style="text-decoration: none;color: white;">Download Resume</a></button>
             </article>
 
             <br><br><br><br><br><br><br><br><br><br><br><br>
             <p style="font-size: 70px;font-weight: bold;">Professional</p>
             <br>
-            <p style="font-size: 35px;font-weight: bold;color: rgba(0, 0, 0, 0.726);">Languages</p>
+            <p style="font-size: 35px;font-weight: bold;color: rgba(0, 0, 0, 0.726);"id = "lang">Languages</p>
             <br>
-            <button onclick="resetBas()">reset</button> <!-- CURRENTLY BROKEN add an r + I want the % to be on the right of the bar + i wanna center the bar(MARGINLEFT)-->
-            <div class="progressBars" onmouseover="barMovements()"> <!-- Why does the bar move very fast sometimes and other times slow? -->
-                <div class = "progressBar1" style="--width: 1"data-label="German"></div>
+            <button onclick="resetBars()">reset</button> <!-- I want the % to be on the right of the bar -->
+            <div class="progressBars" onmouseover="barMovements()"> 
+                <div class = "progressBar1" id = "progressbar1" style="--width: 1"data-label="German"></div>
                 <div class = "percentage" style="opacity: 0; font-weight: bold;">100%</div>
                 <br>
-                <div class = "progressBar1" style="--width: 1"data-label="Portuguese"></div>
+                <div class = "progressBar1" id = "progressbar2" style="--width: 1"data-label="Portuguese"></div>
                 <div class = "percentage" style="opacity: 0; font-weight: bold;">100%</div>
                 <br>
-                <div class = "progressBar2" style="--width: 1"data-label="English"></div>
+                <div class = "progressBar2" id = "progressbar3" style="--width: 1"data-label="English"></div>
                 <div class = "percentage" style="opacity: 0; font-weight: bold;">97%</div>
                 <br>
-                <div class = "progressBar3" style="--width: 1"data-label="French"></div>
+                <div class = "progressBar3" id = "progressbar4" style="--width: 1"data-label="French"></div>
                 <div class = "percentage" style="opacity: 0; font-weight: bold;">40%</div>
             </div>
 
             <br><br>
-            <p style="font-size: 35px;font-weight: bold;color: rgba(0, 0, 0, 0.726);">Programming Languages</p>
+            <p style="font-size: 35px;font-weight: bold;color: rgba(0, 0, 0, 0.726);" id = "progLang">Programming Languages</p>
             <!-- IS THE IMAGE TOO SMALL TO GET WHICH LANGUAGE IT IS???-->
             Java<img src="LanguageSymbols/java.png" style="height: 37px;position: relative;bottom: -5px;"> | JavaScript<img src="LanguageSymbols/JavaScript.png" style="height: 29px;position: relative;bottom: -5px;"> | <img src="LanguageSymbols/c.png" style="height: 27px;position: relative;bottom: -5px;">  | <img src="LanguageSymbols/csharp.png"  style="height: 27px;position: relative;bottom: -5px;"> <br>
              SQL | Kotlin <img src="LanguageSymbols/kotlin.png" style="height: 22px;position: relative;bottom: -5px;"> | Python <img src="LanguageSymbols/python.png" style="height: 24px;position: relative;bottom: -5px;"> | Assembly
             <br><br><br>
-            <p style="font-size: 35px;font-weight: bold;color: rgba(0, 0, 0, 0.726);">Other</p>
+            <p style="font-size: 35px;font-weight: bold;color: rgba(0, 0, 0, 0.726);" id = "other">Other</p>
             HTML<img src="LanguageSymbols/html.png" style="height: 27px;position: relative;bottom: -5px;"> | CSS <img src="LanguageSymbols/css.png" style="height: 27px;position: relative;bottom: -5px;">
             
         </article>
@@ -113,13 +113,13 @@
 
 
 
-        <footer>
-            <div><a href="SiteMap.html" style="text-decoration: none;color: black;">SiteMap</a></div>
-            <div><a href="Contact.html" style="text-decoration: none;color: black;">Contact Me</a></div>
-            <div><a href="https://www.linkedin.com/in/diogo-rodrigues-687643232/" style="text-decoration: none;position: relative;bottom:8px;color: black;" target="_blank">Linked<img src="FooterImgs/linkedInLOGO.png" style="height: 29px;position:relative; bottom: -8px;"></a></div>
-            <div><a href="https://github.com/a22104341" style="text-decoration: none;" target="_blank"><img src="FooterImgs/Github.png" style="height: 28px;position: relative;bottom: -2px;"></a></div>
+        <footer id="footer">
+            <div><a href="SiteMap.html" id ="f1" style="text-decoration: none;color: black;">SiteMap</a></div>
+            <div><a href="Contact.html" id ="f2" style="text-decoration: none;color: black;">Contact Me</a></div>
+            <div><a href="https://www.linkedin.com/in/diogo-rodrigues-687643232/" id ="f3" style="text-decoration: none;position: relative;bottom:8px;color: black;" target="_blank">Linked<img src="FooterImgs/linkedInLOGO.png" style="height: 29px;position:relative; bottom: -8px;"></a></div>
+            <div><a href="https://github.com/a22104341" style="text-decoration: none;" target="_blank"><img src="FooterImgs/Github.png" id ="f4" style="height: 28px;position: relative;bottom: -2px;"></a></div>
             <div>2023</div>
-            <div><img src="FooterImgs/lusofona.png" style="height: 28px;"></div>
+            <div><img src="FooterImgs/lusofona.png" style="height: 28px;" id ="f5"></div>
         </footer>
     </div>
 </body>

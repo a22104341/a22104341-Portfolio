@@ -111,6 +111,7 @@ for (let i = 1; i < interval_id; i++) {
             progressBar.style.setProperty("--width", computedStyle)
 
 }
+
 function resetBar1(){ /*fix this somehow */
     const progressBar = document.getElementsByClassName
     ("progressBar1")[1]
@@ -149,5 +150,122 @@ function resetBars(){
 }
 
 function darkLightMode(){
-    
+    const darkLightButton = document.getElementById("darkLight")
+
+    const backGroundMe = document.getElementById("backgroundME")
+    const austria = document.getElementById("qualities_etc")
+    const bodyText = document.getElementById("body")
+    /* nav */
+    const nav = document.getElementById("nav")
+    const dropbtnText = document.getElementById("dropbtn")
+    const dropdownContentText = document.getElementById("dropdown-content")
+    const dropdownContentText1 = document.getElementById("dropdown-content1")
+    const dropdownContentText2 = document.getElementById("dropdown-content2")
+    const dropdownContentText3 = document.getElementById("dropdown-content3")
+    const dropbtn1Text = document.getElementById("dropbtn1")
+    const dropbtn2Text = document.getElementById("dropbtn2")
+    /* footer */
+    const footer = document.getElementById("footer")
+    const f1 = document.getElementById("f1")
+    const f4 = document.getElementById("f4")
+    /* phrase */
+    const phrase = document.getElementById("phrase")
+    const phraseButton = document.getElementById("phraseButton")
+    const phraseButtonText = document.getElementById("phraseButtonText")
+
+    const lang = document.getElementById("lang")
+    const progLang = document.getElementById("progLang")
+    const other = document.getElementById("other")
+
+    const progressbar1 = document.getElementById("progressbar1")
+    const progressbar2 = document.getElementById("progressbar2")
+    const progressbar3 = document.getElementById("progressbar3")
+    const progressbar4 = document.getElementById("progressbar4")
+
+    if (darkLightButton.src.match("darkmodeImage/darkmode.png"))
+    { /* the hover animation isnt doing anything in the dropdownMenu */
+        darkLightButton.src = "darkmodeImage/lightmode.png"
+        backGroundMe.style.backgroundImage = 'url("backgroundImage/1.png")';
+        austria.style.backgroundImage = 'url("backgroundImage/Austria_Dark.png")'
+        bodyText.style.color = "white"
+
+        nav.style.backgroundColor = "darkblue"
+        dropbtnText.style.color = "white"
+        dropbtnText.style.backgroundColor = "darkblue"
+        dropbtn1Text.style.color = "white"
+        dropbtn1Text.style.backgroundColor = "darkblue"
+        dropbtn2Text.style.color = "white"
+        dropbtn2Text.style.backgroundColor = "darkblue"
+
+        footer.style.color = "white"
+        footer.style.backgroundColor = "darkblue"
+        f1.style.color = "white"
+        f2.style.color = "white"
+        f3.style.color = "white"
+        f4.src = "FooterImgs/Github_White.png"
+        f5.style.color = "white"
+
+        phrase.style.backgroundColor = "darkblue"
+        phraseButton.style.backgroundColor = "turquoise"
+        phraseButtonText.style.color = "black"
+        phraseButtonText.style.fontWeight ="bold"
+
+        lang.style.color = "white"
+        progLang.style.color = "white"
+        other.style.color = "white"
+
+        /* progressbars */
+        progressbar1.style.color = "darkblue"
+        progressbar1.style.backgroundColor = "black"
+        progressbar2.style.color = "darkblue"
+        progressbar2.style.backgroundColor = "black"
+        progressbar3.style.color = "darkblue"
+        progressbar3.style.backgroundColor = "black"
+        progressbar4.style.color = "darkblue"
+        progressbar4.style.backgroundColor = "black"
+
+    }else{
+        darkLightButton.src = "darkmodeImage/darkmode.png"
+        backGroundMe.style.backgroundImage = 'url("backgroundImage/3.png")';
+        austria.style.backgroundImage = 'url("backgroundImage/Austria_White.png")'
+        bodyText.style.color = "black"
+
+        nav.style.backgroundColor = "lightblue"
+        dropbtnText.style.backgroundColor = "lightblue"
+        dropbtn1Text.style.color = "white"
+        dropbtn1Text.style.backgroundColor = "lightblue"
+        dropbtn2Text.style.color = "white"
+        dropbtn2Text.style.backgroundColor = "lightblue"
+        dropdownContentText.style.color = "black"
+        dropdownContentText1.style.color = "black"
+        dropdownContentText2.style.color = "black"
+        dropdownContentText3.style.color = "black"
+
+        footer.style.color = "black"
+        footer.style.backgroundColor = "lightblue"
+        f1.style.color = "black"
+        f2.style.color = "black"
+        f3.style.color = "black"
+        f4.src = "FooterImgs/Github.png"
+        f5.style.color = "black"
+
+        phrase.style.backgroundColor = "lightblue"
+        phraseButton.style.backgroundColor = "black"
+        phraseButtonText.style.color = "white"
+        phraseButtonText.style.fontWeight ="normal"
+
+        lang.style.color = "black"
+        progLang.style.color = "black"
+        other.style.color = "black"
+
+        /* progressbars */
+        progressbar1.style.color = "black"
+        progressbar1.style.backgroundColor = "white"
+        progressbar2.style.color = "black"
+        progressbar2.style.backgroundColor = "white"
+        progressbar3.style.color = "black"
+        progressbar3.style.backgroundColor = "white"
+        progressbar4.style.color = "black"
+        progressbar4.style.backgroundColor = "white"
+    }
 }
