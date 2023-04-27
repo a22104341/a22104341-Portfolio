@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <link rel="stylesheet" href="/oldLabs/estilos.css">
+
+    <title>Primeira página</title>
+    <link rel="icon" href="/oldLabs/images/UlmFlagge.png">
+    <meta charset="utf-8">
+    <meta name="author" content="Diogo Rodrigues">
+    <meta name="description" content="Website about Ulm">
+    <meta name="keywords" content="palavras chave">
+</head>
+
+<body>
+    <header>
+        <h1>
+            Ulm
+        </h1>
+        <section>
+            <h2>Quizz</h2>
+        </section>
+        <figure>
+            <img src="/oldLabs/images/UlmerMuenster.jpg" alt="Ulmer Münster">
+            <figcaption>This is a picture of the Ulmer Münster</figcaption>
+        </figure>
+
+    </header>
+    <br>
+    <br>
+
+    <br>
+
+    <nav>
+        <input type="checkbox" id="ham-menu">
+        <label for="ham-menu">
+        <div class="hide-des">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </div>
+
+
+        </label>
+
+        <div class="full-page-green"></div>
+        <div class="ham-menu">
+        <ul class="centre-text bold-text">
+            <a href="/oldLabs/index.html">😊Introduction</a>
+            <a href="/oldLabs/lab1/local.html">🗺️Localization</a>
+            <a href="/oldLabs/lab1/multimedia.html">📷Multimedia</a>
+            <a href="/oldLabs/lab1/info.html">🧐Information</a>
+            <a href="html5-css.html">👨‍💻html5-css</a>
+            <a href="quizz.html">📝Quizz</a>
+            <a href="/oldLabs/lab3/lab3index.html">✈️Transport to other Cities</a>
+            <a href="/oldLabs/lab4/indexLab4.html">🦸Lab4</a>
+        </ul>
+        </div>
+    </nav>
+
+    <main>
+        
+        <section>
+            <p>
+                On this page you will be facing a quizz about the city of <span class = "important" style="color: yellow;">Ulm</span>.
+            </p>
+        </section>
+
+        <br>
+
+        <section>
+            <form action="form.html" method="POST" action="mailto: diogo.m.rodrigues2003@gmail.com" enctype="multipart/form-data">
+                <fieldset class = "bg">
+                    Do you know <span class = "important">Ulm</span> well enough to succeed?
+                    <fieldset class = "info">
+                        <u> info</u>
+                        <br>
+                        <input type="text" placeholder="First Name">
+                        <input type="text" placeholder="Last Name">
+                        <input type="email" placeholder="E-mail">
+                    </fieldset>
+                    <fieldset class = "questions">
+                        <u>questions</u>
+                        <fieldset class = "one">
+                            <label for="lake">1. What is the longest river, that passes by Ulm?</label>
+                            <input list="lakes" name="lake" id="lake">
+
+                            <datalist id="lakes">
+                                <option value="Iller">
+                                <option value="Donau">
+                                <option value="Rhein">
+                                <option value="Ganga">
+                                <option value="Indus">
+                            </datalist>
+                        </fieldset>
+                        <fieldset class = "two">
+                            2. What is the name of a neighbouring city?
+                            <input type="radio" name="1">
+                            <label for="1">Nulm</label>
+                            <input type="radio" name="1">
+                            <label for="1">New-Ulm</label>
+                            <input type="radio" name="1">
+                            <label for="1">Neu-Ulm</label>
+                            <input type="radio" name="1">
+                            <label for="1">Alt-Ulm</label>
+                        </fieldset>
+                        <fieldset class = "three">
+                            3. Which of these things are Ulm's city symbol ?
+                            <label>
+                                <input type="checkbox"> Crow
+                            </label>
+                            <label>
+                                <input type="checkbox"> Sparrow
+                            </label>
+                            <label>
+                                <input type="checkbox"> Dove
+                            </label>
+                            <label>
+                                <input type="checkbox"> Church
+                            </label>
+                        </fieldset>
+                        <fieldset class = "four">
+                            4. When did the Falling House finish construction?
+                            <input type="number">
+                        </fieldset>
+                        <fieldset class = "five">
+                            5. Send me your favorite pictures you find of Ulm <br>
+                            <input type="file" multiple>
+                        </fieldset>
+                        <fieldset class = "six">
+                            6. When was the Ulmer Münster completed? <br>
+                            <input type="date">
+                        </fieldset>
+                        <fieldset class = "seven">
+                            7. Which two colors does the Flag of Ulm have? <br>
+                            <input type="color"> <input type="text" placeholder="Color Nr.2">
+                        </fieldset>
+                        <fieldset class = "eight">
+                            8. What is an example of a Zip Code for Ulm? <br>
+                            <input type="text" id="country_code" name="country_code" pattern="89[0-9]{3}" title="89xxx"
+                                autocomplete="off">
+                            <input type="submit">
+                        </fieldset>
+                        <fieldset class = "nine">
+                            9. Put in the current German Prime Minister's Name:
+                            <input type="name" placeholder="First Name" autocomplete="off" maxlength="10">
+                            <input type="name" placeholder="Last Name" autocomplete="off" maxlength="10">
+                        </fieldset>
+                        <fieldset class = "ten">
+                            <label for="degrees">10.The Falling House is falling by how many degrees?:</label>
+                            <select name="degrees" id="degrees">
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class = "feedback">
+                            How would you rate this Quizz?
+                            <br>
+                            Bad
+                            <input type="range" min="0" max="10" name="taxa" value="0"
+                                oninput="taxaN.value = parseInt(taxa.value)" required>
+                            <output name=taxaN for="taxa">0</output>
+                            Good
+                        </fieldset>
+                        Any feedback for the Quizz?
+                        <br>
+                        <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+                        <br>
+                        <button>submit</button>
+                    </fieldset>
+
+                </fieldset>
+                <br>
+                Hover over the <b>black square</b> to the Solutions to the quizz
+                <br>
+                <div  class="solutions" style="background-color: black;" >
+                    <span class="solutionstext" style="color:white; background-color: black;" >
+                    1. Donau <br>
+                    2. Neu-Ulm <br>
+                    3. Sparrow <br>
+                    4. 1433 <br>
+                    5. - <br>
+                    6. 31 May 1890 <br>
+                    7. Black and White <br>
+                    8. 89123 for example, it has to start with 89 and have 3 more numbers <br>
+                    9. Olaf Scholz <br>
+                    10. 10 <br>
+                    11. - <br></span>
+
+                </div>
+                <script>
+                    function getSolutions() {
+                        document.getElementById("Solutions").style.backgroundColor = "rgb(31, 29, 29)";
+                        document.getElementById("Solutions").style.color = "white";
+                    }
+                </script>
+
+            </form>
+
+        </section>
+
+        <br>
+
+        <section>
+            <button><a href="/oldLabs/lab1/info.html">Back</a></button>
+        </section>
+    </main>
+
+    <br>
+
+    <footer>Diogo Rodrigues; a22104341; Lusófona; 2023</footer>
+</body>
+
+</html>

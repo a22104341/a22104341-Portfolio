@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+
+    <title>Lab4 Diogo Rodrigues</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Diogo Rodrigues">
+    <meta name="description" content="Website for Lab4">
+    <meta name="keywords" content="palavras chave">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            color: white;
+            background-color: rgb(31, 29, 29);
+            font-family: Arial;
+            text-align: center;
+            background-size: cover;
+        }
+
+        /* Menu button */
+        #ham-menu {
+            display: none;
+            width: 100%;
+        }
+
+        label[for="ham-menu"] {
+            /* The X on the Menu */
+            display: block;
+            position: fixed;
+            top: 2.5%;
+            left: 1%;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background-color: var(--home-bg-color);
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+        }
+
+        .ham-menu {
+            /* Menu */
+            width: 20%;
+            height: 50%;
+            position: fixed;
+            top: 0;
+            visibility: hidden;
+            transform: translate(-110%);
+            z-index: 6;
+            background-color: var(--lightest-green);
+            transition: 1s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 3px 3px 10px rgb(31, 20, 29);
+        }
+
+        .ham-menu>ul {
+            /* Lettering height in Menu text */
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            padding: 20px;
+            height: 50%;
+        }
+
+        .ham-menu>ul a {
+            /* Text inside the button */
+            text-decoration: none;
+            color: White;
+            font-size: 16px;
+        }
+
+        .ham-menu>ul a:hover {
+            /* Text inside the button hovering */
+            text-decoration: none;
+            color: rgb(149, 202, 245);
+            transition: 1s;
+            font-weight: bold;
+            font-size: 16px;
+            font-size: 18px;
+        }
+
+        .ham-menu>ul>li {
+            white-space: nowrap;
+            letter-spacing: 0.15em;
+            cursor: pointer;
+        }
+
+        #ham-menu:checked+label {
+            background-color: transparent;
+            border-color: var(--dark-green);
+        }
+
+        #ham-menu:checked~div.ham-menu {
+            transform: translate(0px);
+            visibility: visible;
+        }
+
+        .full-page-green {
+            /* background color of it */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--dark-green);
+            z-index: 5;
+            opacity: 0;
+            visibility: hidden;
+            display: none;
+            transition: 500ms;
+            position: fixed;
+        }
+
+        #ham-menu:checked~div.full-page-green {
+            display: block;
+            visibility: visible;
+            width: 100%;
+        }
+
+        [for="ham-menu"]>div {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            align-items: center;
+        }
+
+        .menu-line {
+            display: block;
+            width: 17px;
+            height: 2px;
+            margin: 10px 0 5px;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+            background-color: var(--border-color);
+            transition: 500ms;
+            transform-origin: right center;
+        }
+
+        [for="ham-menu"]>div>span:nth-child(4),
+        [for="ham-menu"]>div>span:nth-child(5),
+        [for="ham-menu"]>div>span:nth-child(6) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+            transform-origin: left center;
+        }
+
+        #ham-menu:checked+label span {
+            background-color: var(--dark-green);
+        }
+
+        #ham-menu:checked+label span:nth-child(2),
+        #ham-menu:checked+label span:nth-child(5) {
+            transform: scale(0);
+        }
+
+        #ham-menu:checked+label span:nth-child(1) {
+            transform: translateY(17px) rotate(45deg);
+        }
+
+        #ham-menu:checked+label span:nth-child(4) {
+            transform: translateY(17px) rotate(-45deg);
+        }
+
+        #ham-menu:checked+label span:nth-child(3) {
+            transform: translateY(-17px) rotate(-45deg);
+        }
+
+        #ham-menu:checked+label span:nth-child(6) {
+            transform: translateY(-17px) rotate(45deg);
+        }
+
+        :root {
+            --home-bg-color: rgb(53, 52, 52);
+            /* Button Background */
+            --menu-bg-color: #cbcbc2;
+            --border-color: rgb(187, 187, 187);
+            /* Border + Lines inside */
+            --lightest-green: rgb(53, 52, 52);
+            /* Menu Background Color */
+            --dark-green: rgb(187, 187, 187);
+            /* Button Border + Lines inside menu */
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* menu button end */
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        /* Add some content at the bottom of the video/page */
+        .content {
+            position: fixed;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Style the button used to pause/play the video */
+        #myBtn {
+            width: 200px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #myBtn:hover {
+            background: #ddd;
+            color: black;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="ham-menu">
+        <label for="ham-menu">
+            <div class="hide-des">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </div>
+
+
+        </label>
+
+        <div class="full-page-green"></div>
+        <div class="ham-menu">
+            <ul class="centre-text bold-text">
+                <a href="/oldLabs/index.html">😊Introduction</a>
+                <a href="/oldLabs/lab1/local.html">🗺️Localization</a>
+                <a href="/oldLabs/lab1/multimedia.html">📷Multimedia</a>
+                <a href="/oldLabs/lab1/info.html">🧐Information</a>
+                <a href="/oldLabs/lab2/html5-css.html">👨‍💻html5-css</a>
+                <a href="/oldLabs/lab2/quizz.html">📝Quizz</a>
+                <a href="/oldLabs/lab3/lab3index.html">✈️Transport to other Cities</a>
+                <a href="parallax.html">Parallax</a>
+                <a href="videoPage.html">VideoPage</a>
+                <a href="AnimationPage.html">AnimationPage</a>
+            </ul>
+        </div>
+    </nav><video autoplay muted loop id="myVideo">
+        <source src="/oldLabs/images/video.mp4" type="video/mp4">
+    </video>
+
+    <!-- Optional: some overlay text to describe the video -->
+    <div class="content">
+        <h1>Wow this is Text On top of the Video</h1>
+        <p>Text for the Video</p>
+        <!-- Use a button to pause/play the video with JavaScript -->
+        <button id="myBtn" onclick="myFunction()">Pause</button>
+    </div>
+    <script>
+        // Get the video
+        var video = document.getElementById("myVideo");
+        
+        // Get the button
+        var btn = document.getElementById("myBtn");
+        
+        // Pause and play the video, and change the button text
+        function myFunction() {
+          if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+          } else {
+            video.pause();
+            btn.innerHTML = "Play";
+          }
+        }
+        </script>
+
+</body>
+
+</html>

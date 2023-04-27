@@ -1,0 +1,327 @@
+body {
+    color: white;
+    background-color: rgb(31, 29, 29);
+    font-family: Arial;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    cursor: url('../pwlabs-DiogoRodrigues-a22104341/cursor/normalCursor.gif'), auto;
+}
+
+/* Menu button */
+#ham-menu {
+    display: none;
+    width: 100%;
+}
+  
+label[for="ham-menu"] { /* The X on the Menu */
+    display: block;
+    position: fixed;
+    top: 2.5%;
+    left: 1%;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    background-color: var(--home-bg-color);
+    border-radius: 15px;
+    border: 2px solid var(--border-color);
+}
+
+.ham-menu { /* Menu */
+    width: 20%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    transform: translate(-110%);
+    z-index: 6;
+    background-color: var(--lightest-green);
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 10px rgb(31, 20, 29);
+}
+  
+.ham-menu>ul { /* Lettering height in Menu text */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    padding: 20px;
+    height: 50%;
+}
+
+.ham-menu>ul a{ /* Text inside the button */
+    text-decoration: none;
+    color: White;
+    font-size: 16px;
+}
+
+.ham-menu>ul a:hover{ /* Text inside the button hovering */
+    text-decoration: none;
+    color: rgb(149, 202, 245);
+    transition: 1s;
+    font-weight: bold;
+    font-size: 16px;
+    font-size: 18px;
+}
+
+.ham-menu>ul>li {
+    white-space: nowrap;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+}
+  
+#ham-menu:checked+label {
+    background-color: transparent;
+    border-color: var(--dark-green);
+}
+  
+#ham-menu:checked~div.ham-menu {
+    transform: translate(0px);
+    visibility: visible;
+}
+  
+.full-page-green {  /* background color of it */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-green);
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition: 500ms;
+    position: fixed;
+}
+  
+#ham-menu:checked~div.full-page-green {
+    display: block;
+    visibility: visible;
+    width: 100%;
+}
+  
+[for="ham-menu"]>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    align-items: center;
+}
+  
+.menu-line {
+    display: block;
+    width: 17px;
+    height: 2px;
+    margin: 10px 0 5px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    background-color: var(--border-color);
+    transition: 500ms;
+    transform-origin: right center;
+}
+  
+[for="ham-menu"]>div>span:nth-child(4),
+[for="ham-menu"]>div>span:nth-child(5),
+[for="ham-menu"]>div>span:nth-child(6) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    transform-origin: left center;
+}
+  
+#ham-menu:checked+label span {
+    background-color: var(--dark-green);
+}
+  
+#ham-menu:checked+label span:nth-child(2),
+#ham-menu:checked+label span:nth-child(5) {
+    transform: scale(0);
+}
+  
+#ham-menu:checked+label span:nth-child(1) {
+    transform: translateY(17px) rotate(45deg);
+}
+  
+#ham-menu:checked+label span:nth-child(4) {
+    transform: translateY(17px) rotate(-45deg);
+}
+  
+#ham-menu:checked+label span:nth-child(3) {
+    transform: translateY(-17px) rotate(-45deg);
+}
+  
+#ham-menu:checked+label span:nth-child(6) {
+    transform: translateY(-17px) rotate(45deg);
+}
+  
+:root {
+    --home-bg-color: rgb(53, 52, 52); /* Button Background */
+    --menu-bg-color: #cbcbc2;
+    --border-color: rgb(187, 187, 187); /* Border + Lines inside */
+    --lightest-green: rgb(53, 52, 52); /* Menu Background Color */
+    --dark-green: rgb(187, 187, 187); /* Button Border + Lines inside menu */
+}
+  
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* menu button end */
+
+button {
+    background-color: rgb(31, 29, 29);
+    border-color: white
+}
+
+input {
+    background-color: rgb(31, 29, 29);
+    border-color: white
+}
+
+.important {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.bg {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.bg > fieldset{
+    background-color: rgba(77, 182, 243, 0.479);
+    padding: 10px;
+}
+
+div>p {
+    color: pink
+}
+
+div~p {
+    color: aqua
+}
+
+.solutions {
+    display: inline-block;
+}
+
+.solutions .solutionstext {
+    visibility: hidden;
+}
+
+.solutions:hover .solutionstext {
+    visibility: visible;
+}
+
+.special::first-line {
+    color: yellow;
+    font-size: larger;
+}
+.special::first-letter {
+    color: red;
+    font-size: xx-large;
+}
+
+p.display{display: none;}
+
+/*THIS ONE DONT WORK*/
+
+#jail {
+    font-family: 'Courier New', Courier, monospace;
+    color: yellow;
+}
+
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 5vh;
+
+}
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 10vh;
+    font-size: 50px;
+}
+
+.stickyHeader{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    border:3px solid goldenrod;
+    background-color: rgb(29, 29, 29);
+    z-index: 1;
+    height: 22vh;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+iframe{
+    border-width: 5px;
+    border-color: black;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 5vh;
+}
+
+table a{
+    color: rgb(233, 233, 233);
+}
+
+.thisLine{
+ color: red;
+ font-size: xx-large;
+}
+
+.thisLine:hover{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation: animate 10s;
+}
+
+@keyframes animate{
+    0%{
+        color: aqua;
+    }
+    20%{
+        color: yellow;
+        opacity: 0.5;
+    }
+    40%{
+        background-color: white;
+    }
+    60%{
+        background-color: violet;
+        color: black;
+    }
+    80%{
+        font-size: 59px;
+    }
+    100%{
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        animation: animate 10s;
+    }
+}

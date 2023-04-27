@@ -35,7 +35,7 @@ body {
     display: flex;
 }
 
-.backgroundME{
+.backgroundME {
     background-image: url("backgroundImage/3.png");
     background-repeat: no-repeat;
     background-position: top;
@@ -134,6 +134,7 @@ nav {
     margin-right: 0;
     justify-content: space-evenly;
 }
+
 /*dropDownStuff */
 .dropbtn {
     background-color: lightblue;
@@ -144,29 +145,37 @@ nav {
     cursor: pointer;
     font-weight: bold;
 }
+
 .dropdown {
     position: relative;
     display: inline-block;
     font-weight: bold;
 }
+
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f0ffff;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
+
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
-.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 .dropdown:hover .dropbtn {
     background-color: rgb(154, 194, 207);
 }
@@ -237,7 +246,7 @@ article.phrase {
 article.phrase button {
     height: 50px;
     width: 110px;
-    
+
     font-size: 20px;
 
     border-color: aqua;
@@ -246,11 +255,13 @@ article.phrase button {
     /*choose a better color */
     border-radius: 5px;
 
-    
 
-    
-    
-} /* put in middle */
+
+
+
+}
+
+/* put in middle */
 
 nav .darkmode {
     position: absolute;
@@ -272,21 +283,23 @@ article.qualities_etc {
 
     text-align: center;
 }
+
 /* progressBars */
-article.qualities_etc .progressBars{
+article.qualities_etc .progressBars {
     box-sizing: border-box;
-    
+    margin-left: 32.5%;
 
 }
 
-.progressBars .progressBar1{
+.progressBars .progressBar1 {
     position: relative;
     width: 50%;
     height: 2em;
     background-color: white;
     color: black;
 }
-.progressBar1::before{
+
+.progressBar1::before {
     content: attr(data-label);
     display: flex;
     align-items: center;
@@ -300,14 +313,16 @@ article.qualities_etc .progressBars{
     background-color: lightblue;
     padding: .005em;
 }
-.progressBars .progressBar2{
+
+.progressBars .progressBar2 {
     position: relative;
     width: 50%;
     height: 2em;
     background-color: white;
     color: black;
 }
-.progressBar2::before{
+
+.progressBar2::before {
     content: attr(data-label);
     display: flex;
     align-items: center;
@@ -322,14 +337,15 @@ article.qualities_etc .progressBars{
     padding: .005em;
 }
 
-.progressBars .progressBar3{
+.progressBars .progressBar3 {
     position: relative;
     width: 50%;
     height: 2em;
     background-color: white;
     color: black;
 }
-.progressBar3::before{
+
+.progressBar3::before {
     content: attr(data-label);
     display: flex;
     align-items: center;
@@ -360,14 +376,14 @@ article.qualities_etc .progressBars{
         grid-template-columns: 1fr;
 
 
-        
+
     }
 
     .container .curso {
         font-size: 28px;
     }
 
-    .backgroundME{
+    .backgroundME {
         background-image: url("backgroundImage/phone 3.png");
         background-repeat: no-repeat;
         background-position: top;
@@ -383,21 +399,25 @@ article.qualities_etc .progressBars{
         background-position: center;
         background-size: cover;
         align-items: start;
-    
+
         margin-left: auto;
         margin-right: auto;
-    
+
         text-align: center;
     }
 
-} /* got a problem w the small background*/ /* PHONE VERSION, FOOTER ON TOP NOT SPOSED */
+}
+
+/* got a problem w the small background*/
+/* PHONE VERSION, FOOTER ON TOP NOT SPOSED */
 
 /* nav animation while hovering */
 .dropdown {
     display: inline-block;
     position: relative;
     color: rgb(124, 161, 173);
-  }
+}
+
 .dropdown:after {
     content: '';
     position: absolute;
@@ -409,11 +429,53 @@ article.qualities_etc .progressBars{
     background-color: rgb(124, 161, 173);
     transform-origin: bottom right;
     transition: transform 0.5s ease-out;
-  }
+}
+
 .dropdown:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
-  }
+}
+
+/* Here start Other pages */
+
+/* Education */
 
 
+.EduParallax {
+    /* The image used */
+    background-image: url("backgroundImage/Austria_White.png");
 
+    /* Set a specific height */
+    min-height: 400px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    justify-content: center;
+    margin-left: auto;
+
+    font-size: 25px;
+}
+#Education {
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+}
+
+#WorkExperience {
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+}
+.work{ /* work and edu are switched */
+    background-image: url("backgroundImage/Education.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    width: 100%;
+    font-size: 25px;
+}

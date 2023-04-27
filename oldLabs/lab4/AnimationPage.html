@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <style>
+        .parallax1 {
+            background-image: url("../images/Ulm.jpg");
+            min-height: 800px;
+            background-attachment: fixed;
+            /* centrar e escalar imagem */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parallax2 {
+            background-image: url("../images/Rathaus.jpg");
+            min-height: 300px;
+            background-attachment: fixed;
+            /* centrar e escalar imagem */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parallax3 {
+            background-image: url("../images/Metzgerturm.jpg");
+            min-height: 200px;
+            background-attachment: fixed;
+            /* centrar e escalar imagem */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @media only screen and (max-width: 1200px) {
+            .ThatClass {
+                width: 1100px;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .ThatClass {
+                width: 1500px;
+            }
+        }
+
+        @media only screen and (max-width: 425px) {
+            .ThatClass {
+                width: 400px;
+            }
+        }
+
+        /* Menu button */
+        #ham-menu {
+            display: none;
+            width: 100%;
+        }
+
+        label[for="ham-menu"] {
+            /* The X on the Menu */
+            display: block;
+            position: fixed;
+            top: 2.5%;
+            left: 1%;
+            z-index: 999;
+            width: 60px;
+            height: 60px;
+            background-color: var(--home-bg-color);
+            border-radius: 15px;
+            border: 2px solid var(--border-color);
+        }
+
+        .ham-menu {
+            /* Menu */
+            width: 20%;
+            height: 50%;
+            position: fixed;
+            top: 0;
+            visibility: hidden;
+            transform: translate(-110%);
+            z-index: 6;
+            background-color: var(--lightest-green);
+            transition: 1s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 3px 3px 10px rgb(31, 20, 29);
+        }
+
+        .ham-menu>ul {
+            /* Lettering height in Menu text */
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            padding: 20px;
+            height: 50%;
+        }
+
+        .ham-menu>ul a {
+            /* Text inside the button */
+            text-decoration: none;
+            color: White;
+            font-size: 16px;
+        }
+
+        .ham-menu>ul a:hover {
+            /* Text inside the button hovering */
+            text-decoration: none;
+            color: rgb(149, 202, 245);
+            transition: 1s;
+            font-weight: bold;
+            font-size: 16px;
+            font-size: 18px;
+        }
+
+        .ham-menu>ul>li {
+            white-space: nowrap;
+            letter-spacing: 0.15em;
+            cursor: pointer;
+        }
+
+        #ham-menu:checked+label {
+            background-color: transparent;
+            border-color: var(--dark-green);
+        }
+
+        #ham-menu:checked~div.ham-menu {
+            transform: translate(0px);
+            visibility: visible;
+        }
+
+        .full-page-green {
+            /* background color of it */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--dark-green);
+            z-index: 5;
+            opacity: 0;
+            visibility: hidden;
+            display: none;
+            transition: 500ms;
+            position: fixed;
+        }
+
+        #ham-menu:checked~div.full-page-green {
+            display: block;
+            visibility: visible;
+            width: 100%;
+        }
+
+        [for="ham-menu"]>div {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            align-items: center;
+        }
+
+        .menu-line {
+            display: block;
+            width: 17px;
+            height: 2px;
+            margin: 10px 0 5px;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+            background-color: var(--border-color);
+            transition: 500ms;
+            transform-origin: right center;
+        }
+
+        [for="ham-menu"]>div>span:nth-child(4),
+        [for="ham-menu"]>div>span:nth-child(5),
+        [for="ham-menu"]>div>span:nth-child(6) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+            transform-origin: left center;
+        }
+
+        #ham-menu:checked+label span {
+            background-color: var(--dark-green);
+        }
+
+        #ham-menu:checked+label span:nth-child(2),
+        #ham-menu:checked+label span:nth-child(5) {
+            transform: scale(0);
+        }
+
+        #ham-menu:checked+label span:nth-child(1) {
+            transform: translateY(17px) rotate(45deg);
+        }
+
+        #ham-menu:checked+label span:nth-child(4) {
+            transform: translateY(17px) rotate(-45deg);
+        }
+
+        #ham-menu:checked+label span:nth-child(3) {
+            transform: translateY(-17px) rotate(-45deg);
+        }
+
+        #ham-menu:checked+label span:nth-child(6) {
+            transform: translateY(-17px) rotate(45deg);
+        }
+
+        :root {
+            --home-bg-color: rgb(53, 52, 52);
+            /* Button Background */
+            --menu-bg-color: #cbcbc2;
+            --border-color: rgb(187, 187, 187);
+            /* Border + Lines inside */
+            --lightest-green: rgb(53, 52, 52);
+            /* Menu Background Color */
+            --dark-green: rgb(187, 187, 187);
+            /* Button Border + Lines inside menu */
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* menu button end */
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            height: 65vh;
+            background-color: black;
+            display: grid;
+            place-items: center;
+            align-items: center;
+        }
+
+        .square {
+            width: 10rem;
+            height: 10rem;
+            background-color: pink;
+            position: relative;
+            transform: rotate(45deg);
+            animation: beater 3s linear infinite;
+        }
+
+        .square::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+            position: absolute;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            animation: beater 3s linear infinite;
+        }
+
+        .square::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+            position: absolute;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            animation: beater 3s linear infinite;
+        }
+
+        /* Define the keyframes for the animation */
+        @keyframes beater {
+            0% {
+                background: red;
+            }
+
+            15% {
+                background: orange;
+            }
+
+            30% {
+                transform: scale(0.5);
+                background: yellow;
+            }
+
+            45% {
+                background: greenyellow;
+            }
+
+            60% {
+                background: blue;
+            }
+
+            75% {
+                background: indigo;
+            }
+
+            100% {
+                background: violet;
+            }
+        }
+
+
+        @keyframes test {
+            0% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+
+
+
+        .cunt {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: relative;
+            animation: myfirst 5s 2;
+            animation-direction: alternate;
+        }
+
+        @keyframes myfirst {
+            0% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25% {
+                background: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background: green;
+                left: 0px;
+                top: 200px;
+            }
+
+            100% {
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="ham-menu">
+        <label for="ham-menu">
+            <div class="hide-des">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </div>
+
+
+        </label>
+
+        <div class="full-page-green"></div>
+        <div class="ham-menu">
+            <ul class="centre-text bold-text">
+                <a href="/oldLabs/index.html">😊Introduction</a>
+                <a href="/oldLabs/lab1/local.html">🗺️Localization</a>
+                <a href="/oldLabs/lab1/multimedia.html">📷Multimedia</a>
+                <a href="/oldLabs/lab1/info.html">🧐Information</a>
+                <a href="/oldLabs/lab2/html5-css.html">👨‍💻html5-css</a>
+                <a href="/oldLabs/lab2/quizz.html">📝Quizz</a>
+                <a href="/oldLabs/lab3/lab3index.html">✈️Transport to other Cities</a>
+                <a href="parallax.html">Parallax</a>
+                <a href="videoPage.html">VideoPage</a>
+                <a href="indexLab4.html">🦸Lab4</a>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="square"></div>
+        </div>
+
+        <div class="cunt"></div>
+        <br><br><br><br><br><br><br><br><br><br> <br><br>
+        <svg width="140px" height="320px">  1
+            <rect x="20" y="20" width="100" height="280"
+                  fill="blue" stroke="black" stroke-width="3" />
+            <circle cx="70" cy="80" r="30"
+                    fill="red" stroke="black" stroke-width="2" />
+            <circle cx="70" cy="160" r="30"
+                    fill="yellow" stroke="black" stroke-width="2" />
+            <circle cx="70" cy="240" r="30"
+                    fill="#40CC40" stroke="black" stroke-width="2" />
+                          2
+        </svg>
+    </nav>
+
+
+</body>
+
+</html>

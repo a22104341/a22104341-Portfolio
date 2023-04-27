@@ -1,0 +1,457 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box; 
+    padding: 0; 
+    margin: 0;
+}
+
+body{
+    background-color: rgb(31, 29, 29);
+    border-color: white;
+    color: darkolivegreen;
+}
+
+.title{
+    font-size: 70px;
+    background-color: black;
+    height: 50vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.img-paragraph{
+    position: relative;
+}
+
+.img-paragraph .imgSnow{
+    width: 100%;
+}
+
+.img-paragraph .paragraph{
+    color: yellow;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container .capitais{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: space-around;
+    background-color: white;
+    padding: 50px;
+    color: #000;
+}
+
+.container .capitais > div {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px #888888;
+    margin: 10px;
+}
+
+.container .capitais img{
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .capitais div div:last-child {
+    width: 380px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .capitais div div p{
+    font-weight: bold;
+    font-size: larger;
+}
+
+.topLeft{
+
+}
+
+.top{
+
+}
+
+.topRight{
+
+}
+
+.left{
+
+}
+
+.mid{
+
+}
+
+.right{
+
+}
+
+.botLeft{
+
+}
+
+.bot{
+
+}
+
+.botRight{
+
+}
+
+.extra1{
+
+}
+
+.extra2{
+    
+}
+
+.extra3{
+    
+}
+
+.capital{
+    font-size: 45px;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-decoration:underline;
+}
+
+.aroundCricle{
+    display: flex;
+    padding: 50px;
+}
+
+.circle{
+    height: 200px;
+    width: 200px;
+
+    border-style:inset;
+    border-color: aquamarine;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle div:last-child{
+    display: flex;
+    align-items: center;
+    justify-content:  center;
+    color: black;
+}
+
+.square {
+    height: 200px;
+    width: 200px;
+    color: white;
+    font-size: 18px;
+    background-color: grey;
+    border-style: dashed;
+    border-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.container .aroundCircle{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.insideCircleImg{
+    position: absolute;
+    opacity: 1;
+    clip: rect(0px,200px,200px,0px);
+    border-radius: 60%;
+}
+
+.circle img:hover{
+    /*z-index: -1; this makes the image flicker i dont know why*/
+    opacity: 0.5;
+}
+
+.circle p{
+    color: aquamarine;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.square:hover + .hiddenHover{
+    display: block;
+    
+}
+
+.hiddenHover{
+    display: none;
+    align-items: center;
+}
+
+.stickyHeader{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    border:3px solid aquamarine;
+    background-color: rgb(29, 29, 29);
+    z-index: 1;
+    height: 22vh;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.stickyHeader a{
+    text-decoration: none;
+    color: white;
+    transition-timing-function: ease-in;
+    transition-property: all;
+    transform-origin: left;
+    transition-duration: 0.4s;
+}
+
+.stickyHeader a:hover{
+    background-color: rgba(211, 211, 211, 0.5);
+    font-weight: bold;
+}
+
+.item1{
+    grid-area: header;
+}
+
+.item2{
+    grid-area: nav;
+    background-image: url('../lab3/imagesLab3/compass.png');
+    background-size:cover;
+}
+
+.item3{
+    grid-area: main;
+    background-color: aquamarine;
+}
+
+.item4{
+    grid-area: otherOptions;
+    color: aquamarine;
+    background-image: url('../lab3/imagesLab3/roadBackGround.jpg');
+    background-size:cover;
+}
+
+.item5{
+    font-size: 18px;
+    background-color: black;
+    width: 100%;
+    height: 7vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: aquamarine;
+    grid-area: footer;
+}
+
+.item5 a{
+    text-decoration: none;
+    color: aquamarine;
+}
+
+.itemPic{
+    grid-area: pic;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+
+    'header header header'
+    'main main main'
+    'nav otherOptions otherOptions'
+    'pic pic pic'
+    'footer footer footer';
+
+    grid-template-columns: 4fr 13fr 13fr;
+}
+/* Menu button */
+#ham-menu {
+    display: none;
+    width: 100%;
+}
+  
+label[for="ham-menu"] { /* The X on the Menu */
+    display: block;
+    position: fixed;
+    top: 2.5%;
+    left: 1%;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+    background-color: var(--home-bg-color);
+    border-radius: 15px;
+    border: 2px solid var(--border-color);
+}
+
+.ham-menu { /* Menu */
+    width: 20%;
+    height: 50%;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    transform: translate(-110%);
+    z-index: 6;
+    background-color: var(--lightest-green);
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 10px rgb(31, 20, 29);
+}
+  
+.ham-menu>ul { /* Lettering height in Menu text */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    padding: 20px;
+    height: 50%;
+}
+
+.ham-menu>ul a{ /* Text inside the button */
+    text-decoration: none;
+    color: White;
+    font-size: 16px;
+}
+
+.ham-menu>ul a:hover{ /* Text inside the button hovering */
+    text-decoration: none;
+    color: rgb(149, 202, 245);
+    transition: 1s;
+    font-weight: bold;
+    font-size: 16px;
+    font-size: 18px;
+}
+
+.ham-menu>ul>li {
+    white-space: nowrap;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+}
+  
+#ham-menu:checked+label {
+    background-color: transparent;
+    border-color: var(--dark-green);
+}
+  
+#ham-menu:checked~div.ham-menu {
+    transform: translate(0px);
+    visibility: visible;
+}
+  
+.full-page-green {  /* background color of it */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-green);
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    transition: 500ms;
+    position: fixed;
+}
+  
+#ham-menu:checked~div.full-page-green {
+    display: block;
+    visibility: visible;
+    width: 100%;
+}
+  
+[for="ham-menu"]>div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    align-items: center;
+}
+  
+.menu-line {
+    display: block;
+    width: 17px;
+    height: 2px;
+    margin: 10px 0 5px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    background-color: var(--border-color);
+    transition: 500ms;
+    transform-origin: right center;
+}
+  
+[for="ham-menu"]>div>span:nth-child(4),
+[for="ham-menu"]>div>span:nth-child(5),
+[for="ham-menu"]>div>span:nth-child(6) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    transform-origin: left center;
+}
+  
+#ham-menu:checked+label span {
+    background-color: var(--dark-green);
+}
+  
+#ham-menu:checked+label span:nth-child(2),
+#ham-menu:checked+label span:nth-child(5) {
+    transform: scale(0);
+}
+  
+#ham-menu:checked+label span:nth-child(1) {
+    transform: translateY(17px) rotate(45deg);
+}
+  
+#ham-menu:checked+label span:nth-child(4) {
+    transform: translateY(17px) rotate(-45deg);
+}
+  
+#ham-menu:checked+label span:nth-child(3) {
+    transform: translateY(-17px) rotate(-45deg);
+}
+  
+#ham-menu:checked+label span:nth-child(6) {
+    transform: translateY(-17px) rotate(45deg);
+}
+  
+:root {
+    --home-bg-color: rgb(53, 52, 52); /* Button Background */
+    --menu-bg-color: #cbcbc2;
+    --border-color: rgb(187, 187, 187); /* Border + Lines inside */
+    --lightest-green: rgb(53, 52, 52); /* Menu Background Color */
+    --dark-green: rgb(187, 187, 187); /* Button Border + Lines inside menu */
+}
+  
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* menu button end */

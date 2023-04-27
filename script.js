@@ -86,6 +86,10 @@ function barMovement3(){
     }, 7)
 }
 function barMovements(){
+    let date = document.getElementById("date")
+    date.innerHTML = new Date().getFullYear();
+
+
     barMovement()
     barMovement1()
     barMovement2()
@@ -168,6 +172,7 @@ function darkLightMode(){
     const footer = document.getElementById("footer")
     const f1 = document.getElementById("f1")
     const f4 = document.getElementById("f4")
+    const date = document.getElementById("date")
     /* phrase */
     const phrase = document.getElementById("phrase")
     const phraseButton = document.getElementById("phraseButton")
@@ -180,10 +185,12 @@ function darkLightMode(){
     const progressbar1 = document.getElementById("progressbar1")
     const progressbar2 = document.getElementById("progressbar2")
     const progressbar3 = document.getElementById("progressbar3")
-    const progressbar4 = document.getElementById("progressbar4")
+    
+    /* education + experience */ 
 
-    if (darkLightButton.src.match("darkmodeImage/darkmode.png"))
-    { /* the hover animation isnt doing anything in the dropdownMenu */
+
+    if(darkLightButton.src.match("darkmodeImage/darkmode.png"))
+    {
         darkLightButton.src = "darkmodeImage/lightmode.png"
         backGroundMe.style.backgroundImage = 'url("backgroundImage/1.png")';
         austria.style.backgroundImage = 'url("backgroundImage/Austria_Dark.png")'
@@ -269,3 +276,7 @@ function darkLightMode(){
         progressbar4.style.backgroundColor = "white"
     }
 }
+
+
+
+
