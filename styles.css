@@ -458,17 +458,23 @@ article.qualities_etc .progressBars {
     margin-left: auto;
 
     font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 #Education {
     font-size: 50px;
     font-weight: bold;
     display: flex;
+    
 }
 
 #WorkExperience {
     font-size: 50px;
     font-weight: bold;
     display: flex;
+    
 }
 .work{ /* work and edu are switched */
     background-image: url("backgroundImage/Education.png");
@@ -478,4 +484,9 @@ article.qualities_etc .progressBars {
     height: 70vh;
     width: 100%;
     font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
 }
