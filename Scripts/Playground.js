@@ -17,9 +17,8 @@ function darkLightMode() {
     const f4 = document.getElementById("f4")
     const date = document.getElementById("date")
 
-    /* this stuff */
-    const container = document.getElementById("yessssssssssssssssssssss")
-    const video = document.getElementById("stufffffffff")
+
+
     if (darkLightButton.src.match("darkmodeImage/darkmode.png")) {
         darkLightButton.src = "darkmodeImage/lightmode.png"
         bodyText.style.color = "white"
@@ -40,11 +39,6 @@ function darkLightMode() {
         f4.src = "FooterImgs/Github_White.png"
         f5.style.color = "white"
 
-        /*stuff */
-        container.style.backgroundColor = "black"
-        container.style.color = "white"
-        video.style.backgroundColor = "black"
-        video.style.color = "white"
 
     } else {
         darkLightButton.src = "darkmodeImage/darkmode.png"
@@ -62,7 +56,6 @@ function darkLightMode() {
         dropdownContentText2.style.color = "black"
         dropdownContentText3.style.color = "black"
 
-
         footer.style.color = "black"
         footer.style.backgroundColor = "lightblue"
         f1.style.color = "black"
@@ -71,29 +64,38 @@ function darkLightMode() {
         f4.src = "FooterImgs/Github.png"
         f5.style.color = "black"
 
-        /*stuff */
-        container.style.backgroundColor = "white"
-        container.style.color = "black"
-        video.style.backgroundColor = "white"
-        video.style.color = "black"
+
     }
 }
 
-function videoVisibility() {
-    const video = document.getElementById("video")
-    const button = document.getElementById("leButton")
-    opacity = window.getComputedStyle(video).getPropertyValue("opacity");
+const inputName = document.getElementById('input-name');
+const outputNames = document.querySelectorAll('.output-name');
 
-    if (opacity == 1) {
-        video.style.opacity = 0;
-        button.textContent = "make video visible"
-    } else {
-        video.style.opacity = 1;
-        button.textContent = "make video invisible"
+inputName.addEventListener('input', () => {
+    const name = inputName.value.slice(0, 20);
+
+    outputNames.forEach((outputName) => {
+        outputName.textContent = name;
+    });
+});
+
+inputName.addEventListener('keydown', (event) => {
+    if (inputName.value.length >= 20 && event.key !== 'Backspace') {
+        event.preventDefault();
     }
+});
+
+
+
+const circle = document.getElementById('circle');
+
+circle.onmouseout = function () {
+    circle.style.animationPlayState = 'running';
 }
 
-function scrollThis() {
-    document.getElementById("leButton").scrollIntoView()
-    videoVisibility()
+circle.onmouseover = function () {
+    circle.style.animationPlayState = 'paused';
 }
+
+
+

@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <script src="Scripts/Playground.js" defer></script>
 
     <title>Diogo Rodrigues</title>
     <link rel="icon" href="images/UlmFlagge.png"> <!-- need a logo here-->
@@ -13,7 +13,7 @@
     <meta name="keywords" content="portfolio">
 </head>
 
-<body id = "body">
+<body id="body">
     <div class="container">
         <nav id="nav">
             <div class="dropdown">
@@ -49,21 +49,34 @@
             </div>
         </nav>
 
+        <!--textOnImage-->
+        <div class="javaIMAGECONTAINER">
+            <img src="backgroundImage/gravityFalls.png" style="width:100%; height:100%">
+            <input type="text" class="inputBOX" id="leTextBox" placeholder="Write a Sentence">
+            <div id="sentenceOnTop">a</div>
+        </div>
 
-        <main><br>
-            <div id = "Education">Education</div>
-            
-            <div id = "WorkExperience">Work Experience</div>
-        </main>
+        <div class="threespots">
+            <input id="input-name" type="text" maxlength="20" placeholder="Write a name in here">
+            <p class="output-name top-left"></p>
+            <p class="output-name middle-right"></p>
+            <p class="output-name bottom"></p>
+        </div>
 
+        <div id="circle"></div>
 
         <footer id="footer">
-            <div><a href="SiteMap.html" id ="f1" style="text-decoration: none;color: black;">SiteMap</a></div>
-            <div><a href="Contact.html" id ="f2" style="text-decoration: none;color: black;">Contact Me</a></div>
-            <div><a href="https://www.linkedin.com/in/diogo-rodrigues-687643232/" id ="f3" style="text-decoration: none;position: relative;bottom:8px;color: black;" target="_blank">Linked<img src="FooterImgs/linkedInLOGO.png" style="height: 29px;position:relative; bottom: -8px;"></a></div>
-            <div><a href="https://github.com/a22104341" style="text-decoration: none;" target="_blank"><img src="FooterImgs/Github.png" id ="f4" style="height: 28px;position: relative;bottom: -2px;"></a></div>
-            <div id ="date">2023</div>
-            <div><img src="FooterImgs/lusofona.png" style="height: 28px;" id ="f5"></div>
+            <div><a href="SiteMap.html" id="f1" style="text-decoration: none;color: black;">SiteMap</a></div>
+            <div><a href="Contact.html" id="f2" style="text-decoration: none;color: black;">Contact Me</a></div>
+            <div><a href="https://www.linkedin.com/in/diogo-rodrigues-687643232/" id="f3"
+                    style="text-decoration: none;position: relative;bottom:8px;color: black;" target="_blank">Linked<img
+                        src="FooterImgs/linkedInLOGO.png" style="height: 29px;position:relative; bottom: -8px;"></a>
+            </div>
+            <div><a href="https://github.com/a22104341" style="text-decoration: none;" target="_blank"><img
+                        src="FooterImgs/Github.png" id="f4" style="height: 28px;position: relative;bottom: -2px;"></a>
+            </div>
+            <div id="date">2023</div>
+            <div><img src="FooterImgs/lusofona.png" style="height: 28px;" id="f5"></div>
         </footer>
     </div>
 </body>

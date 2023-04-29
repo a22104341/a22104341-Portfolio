@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -439,8 +442,6 @@ article.qualities_etc .progressBars {
 /* Here start Other pages */
 
 /* Education */
-
-
 .EduParallax {
     /* The image used */
     background-image: url("backgroundImage/Austria_White.png");
@@ -508,26 +509,23 @@ article.qualities_etc .progressBars {
 /* ProgWeb */
 #ProgWeb {
     height: 85vh;
-
 }
 
 #ProgWeb {
     background-color: rgb(238, 248, 248);
     display: flex;
-    flex-flow: row wrap;
     justify-content: center;
     padding: 25px 100px;
 }
 
 #ProgWeb {
     display: grid;
-    flex-direction: row;
-    grid-template-areas: 
-    'lab news';
-    
+    flex-direction: column;
+    grid-template-areas:
+        'lab news';
 }
 
-#ProgWeb > div > a {
+#ProgWeb>div>a {
     display: flex;
     width: 250px;
     height: 100px;
@@ -545,18 +543,171 @@ article.qualities_etc .progressBars {
     color: black;
 }
 
-#lab{
+#lab {
     grid-area: "lab";
 }
-#News{
+
+#News {
+    display: flex;
     grid-area: "news";
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 650px
 }
 
-#ProgWeb > div > div{
+#ProgWeb>div>div {
     font-size: 40px;
 }
 
-#ProgWeb #News > a{
+#ProgWeb #News>a {
     position: relative;
 }
 
+/* Interesting */
+
+.container .capitais {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: space-around;
+    background-color: white;
+    padding: 50px;
+    color: #000;
+}
+
+.container .capitais>div {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px #888888;
+    margin: 10px;
+}
+
+.container .capitais img {
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .capitais div div:last-child {
+    width: 380px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .capitais div p {
+    margin: 20px;
+}
+
+/* JavaScriptPlayground */
+.javaIMAGECONTAINER {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 1;
+    width: 50%;
+    justify-items: center;
+
+}
+
+.inputBOX {
+    position: absolute;
+    border-color: black;
+    border-width: 5px;
+    height: 20px;
+    width: 600px;
+    bottom: 4px;
+    left: 0;
+    z-index: 9;
+}
+
+#sentenceOnTop {
+    position: absolute;
+    border-color: lightblue;
+    font-size: 30px;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 600px;
+    z-index: 99999999999;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+}
+
+.threespots {
+    position: relative;
+    height: 100vh;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.output-name {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-size: 3em;
+    margin: 50px;
+}
+
+.output-name.top-left {
+    top: 10%;
+    right: 10%;
+}
+
+.output-name.middle-right {
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+.output-name.bottom {
+    bottom: 10%;
+    text-align: center;
+}
+
+#input-name {
+    width: 100%;
+    max-width: 400px;
+    /* Set a maximum width to limit the size of the input box */
+    margin: 0 auto;
+    /* Center the input box horizontally */
+    padding: 10px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+
+
+#circle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    animation: roll 10s linear infinite;
+  }
+  
+  @keyframes roll {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(calc(100vw - 50px));
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
