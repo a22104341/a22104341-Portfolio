@@ -463,20 +463,23 @@ article.qualities_etc .progressBars {
     justify-content: center;
     flex-direction: column;
 }
+
 #Education {
     font-size: 50px;
     font-weight: bold;
     display: flex;
-    
+
 }
 
 #WorkExperience {
     font-size: 50px;
     font-weight: bold;
     display: flex;
-    
+
 }
-.work{ /* work and edu are switched */
+
+.work {
+    /* work and edu are switched */
     background-image: url("backgroundImage/Education.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -488,5 +491,72 @@ article.qualities_etc .progressBars {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+/* personal */
+#OOF {
+    display: flex;
+    font-size: 120px;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    flex-direction: column;
+    word-spacing: 20px;
+    font-weight: bold;
+}
+
+/* ProgWeb */
+#ProgWeb {
+    height: 85vh;
+
+}
+
+#ProgWeb {
+    background-color: rgb(238, 248, 248);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 25px 100px;
+}
+
+#ProgWeb {
+    display: grid;
+    flex-direction: row;
+    grid-template-areas: 
+    'lab news';
     
 }
+
+#ProgWeb > div > a {
+    display: flex;
+    width: 250px;
+    height: 100px;
+    padding: 25px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    /* arredonda os cantos */
+    box-shadow: 5px 5px 15px grey;
+
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    text-decoration: none;
+    color: black;
+}
+
+#lab{
+    grid-area: "lab";
+}
+#News{
+    grid-area: "news";
+}
+
+#ProgWeb > div > div{
+    font-size: 40px;
+}
+
+#ProgWeb #News > a{
+    position: relative;
+}
+

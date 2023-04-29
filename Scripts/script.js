@@ -185,9 +185,6 @@ function darkLightMode(){
     const progressbar1 = document.getElementById("progressbar1")
     const progressbar2 = document.getElementById("progressbar2")
     const progressbar3 = document.getElementById("progressbar3")
-    
-    /* education + experience */ 
-
 
     if(darkLightButton.src.match("darkmodeImage/darkmode.png"))
     {
@@ -230,7 +227,6 @@ function darkLightMode(){
         progressbar3.style.backgroundColor = "black"
         progressbar4.style.color = "darkblue"
         progressbar4.style.backgroundColor = "black"
-
     }else{
         darkLightButton.src = "darkmodeImage/darkmode.png"
         backGroundMe.style.backgroundImage = 'url("backgroundImage/3.png")';
@@ -274,6 +270,7 @@ function darkLightMode(){
         progressbar3.style.backgroundColor = "white"
         progressbar4.style.color = "black"
         progressbar4.style.backgroundColor = "white"
+
     }
 }
 
