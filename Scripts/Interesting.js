@@ -1,4 +1,4 @@
-function darkLightMode() {
+function darkLightMode(){
     const darkLightButton = document.getElementById("darkLight")
 
     const bodyText = document.getElementById("body")
@@ -17,12 +17,8 @@ function darkLightMode() {
     const f4 = document.getElementById("f4")
     const date = document.getElementById("date")
 
-    /* ProgWeb */
-    const ProgWeb = document.getElementById("ProgWeb")
-    const boxesLab = document.getElementById("lab").getElementsByTagName("a")
-    const news = document.getElementById("News").getElementsByTagName("a")
-
-    if (darkLightButton.src.match("darkmodeImage/darkmode.png")) {
+    if(darkLightButton.src.match("darkmodeImage/darkmode.png"))
+    {
         darkLightButton.src = "darkmodeImage/lightmode.png"
         bodyText.style.color = "white"
 
@@ -42,19 +38,7 @@ function darkLightMode() {
         f4.src = "FooterImgs/Github_White.png"
         f5.style.color = "white"
 
-
-        ProgWeb.style.backgroundColor = "black"
-        for (var b = 0; b < 10; b++) {
-            news[b].style.backgroundColor = "darkblue"
-            news[b].style.color = "white"
-        }
-        for (var i = 0; i < 5; i++) {
-            boxesLab[i].style.backgroundColor = "darkblue"
-            boxesLab[i].style.color = "white"
-        }
-        
-
-    } else {
+    }else{
         darkLightButton.src = "darkmodeImage/darkmode.png"
         bodyText.style.color = "black"
 
@@ -78,16 +62,5 @@ function darkLightMode() {
         f3.style.color = "black"
         f4.src = "FooterImgs/Github.png"
         f5.style.color = "black"
-
-
-        ProgWeb.style.backgroundColor = "white"
-        for (var b = 0; b < 10; b++) {
-            news[b].style.backgroundColor = "white"
-            news[b].style.color = "black"
-        }
-        for (var i = 0; i < 5; i++) {
-            boxesLab[i].style.backgroundColor = "white"
-            boxesLab[i].style.color = "black"
-        }
     }
 }
