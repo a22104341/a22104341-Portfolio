@@ -1,3 +1,5 @@
+
+
 /* Languages*/
 function makePercentageVisible() {
     const text = document.getElementsByClassName("percentage")[0];
@@ -162,7 +164,7 @@ function darkLightMode() {
     const progressbar2 = document.getElementById("progressbar2")
     const progressbar3 = document.getElementById("progressbar3")
 
-    if (darkLightButton.src.match("darkmodeImage/darkmode.png")) {
+    if (darkLightButton.src.match("darkmodeImage/darkmode.png") /*|| !sessionStorage.getItem("darkmode")*/) {
         darkLightButton.src = "darkmodeImage/lightmode.png"
         backGroundMe.style.backgroundImage = 'url("backgroundImage/1.png")';
         austria.style.backgroundImage = 'url("backgroundImage/Austria_Dark.png")'
@@ -202,6 +204,9 @@ function darkLightMode() {
         progressbar3.style.backgroundColor = "black"
         progressbar4.style.color = "darkblue"
         progressbar4.style.backgroundColor = "black"
+
+
+        /*sessionStorage.setItem("darkmode", true)*/
 
     } else {
         darkLightButton.src = "darkmodeImage/darkmode.png"
@@ -246,7 +251,13 @@ function darkLightMode() {
         progressbar4.style.color = "black"
         progressbar4.style.backgroundColor = "white"
 
+        /*sessionStorage.setItem("darkmode", false)*/
     }
 }
-
+/*
+window.onload= function(){
+    if(sessionStorage.getItem("darkmode")){
+        darkLightMode();
+    }
+}*/
 

@@ -444,6 +444,25 @@ article.qualities_etc .progressBars {
         text-align: center;
     }
 
+    #eduparallax{
+        font-size: 25px;
+        height: 600px;
+    }
+
+    #dropbtn2 {
+        display: flex;
+        margin-right: 30%;
+    }
+
+    #contactStuff{
+        display: flex;
+        margin-left: 0;
+        padding: 0;
+        
+    }
+
+    
+
 }
 
 /* got a problem w the small background*/
@@ -899,4 +918,18 @@ article.qualities_etc .progressBars {
     width: 650px;
     margin-left: 37%;
     margin-top: 3%;
+}
+
+#contactStuff{
+    justify-content: center;
+    justify-items: center;
+    padding: 15%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30%;
+    height: 500px;
+}
+.container #feet{
+    position: absolute;
+    bottom: 0;
 }

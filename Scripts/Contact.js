@@ -21,7 +21,7 @@ function darkLightMode(){
     const eduparallax = document.getElementById("eduparallax")
     const work = document.getElementById("work")
 
-    if(darkLightButton.src.match("darkmodeImage/darkmode.png")/*|| !sessionStorage.getItem("darkmode")*/)
+    if(darkLightButton.src.match("darkmodeImage/darkmode.png"))
     {
         darkLightButton.src = "darkmodeImage/lightmode.png"
         bodyText.style.color = "white"
@@ -42,11 +42,8 @@ function darkLightMode(){
         f4.src = "FooterImgs/Github_White.png"
         f5.style.color = "white"
 
-        /*sessionStorage.setItem("darkmode", false)*/
+        bodyText.style.backgroundColor = "black"
 
-        /* EduPageStuff */
-        eduparallax.style.background = 'url("backgroundImage/Austria_Dark.png")'
-        work.style.background = 'url("backgroundImage/Education_Dark.png")'
     }else{
         darkLightButton.src = "darkmodeImage/darkmode.png"
         bodyText.style.color = "black"
@@ -71,18 +68,18 @@ function darkLightMode(){
         f4.src = "FooterImgs/Github.png"
         f5.style.color = "black"
 
-        /*sessionStorage.setItem("darkmode", true)*/
-
-        /* EduPageStuff */
-        eduparallax.style.background = 'url("backgroundImage/Austria_White.png")'
-        work.style.background = 'url("backgroundImage/Education.png")'
+        bodyText.style.backgroundColor = "white"
+        bodyText.style.color = "black"
     }
 }
 
-
-
-/*window.onload= function(){
-    if(sessionStorage.getItem("darkmode")){
-        darkLightMode();
-    }
-}*/
+function thisDefoSendsTrust(){
+    const nameTing = document.getElementById("nameTing")
+    const emailTing = document.getElementById("emailTing")
+    const messageTing = document.getElementById("messageTing")
+    nameTing.innerHTML = ""
+    emailTing.innerHTML = ""
+    messageTing.innerHTML = ""
+    
+    alert("Email has been sent")
+}
