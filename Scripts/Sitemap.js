@@ -17,9 +17,7 @@ function darkLightMode(){
     const f4 = document.getElementById("f4")
     const date = document.getElementById("date")
 
-    /* EduPageStuff */
-    const eduparallax = document.getElementById("eduparallax")
-    const work = document.getElementById("work")
+    const leMapSite = document.getElementById("leMapSite")
 
     if(darkLightButton.src.match("darkmodeImage/darkmode.png"))
     {
@@ -42,9 +40,9 @@ function darkLightMode(){
         f4.src = "FooterImgs/Github_White.png"
         f5.style.color = "white"
 
-        /* EduPageStuff */
-        eduparallax.style.background = 'url("backgroundImage/Austria_Dark.png")'
-        work.style.background = 'url("backgroundImage/Education_Dark.png")'
+        
+        bodyText.style.backgroundColor = "black"
+        leMapSite.src = "backgroundImage/darkSITEMAP.png"
     }else{
         darkLightButton.src = "darkmodeImage/darkmode.png"
         bodyText.style.color = "black"
@@ -69,8 +67,7 @@ function darkLightMode(){
         f4.src = "FooterImgs/Github.png"
         f5.style.color = "black"
 
-        /* EduPageStuff */
-        eduparallax.style.background = 'url("backgroundImage/Austria_White.png")'
-        work.style.background = 'url("backgroundImage/Education.png")'
+        bodyText.style.backgroundColor = "white"
+        leMapSite.src = "backgroundImage/SITEMAP.svg"
     }
 }

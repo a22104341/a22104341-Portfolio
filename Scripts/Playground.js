@@ -54,7 +54,6 @@ function darkLightMode() {
         dropbtn2Text.style.backgroundColor = "lightblue"
         dropdownContentText.style.color = "black"
         dropdownContentText1.style.color = "black"
-        dropdownContentText2.style.color = "black"
         dropdownContentText3.style.color = "black"
 
         footer.style.color = "black"

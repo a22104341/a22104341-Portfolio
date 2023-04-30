@@ -102,17 +102,6 @@ function barMovements() {
     setInterval(() => makePercentagesVisible(), 3900)
 }
 
-
-
-
-
-
-
-
-
-
-
-
 function resetBar1() {
     const progressBar = document.getElementsByClassName("progressBar1")[0]
     progressBar.style.setProperty("--width", 0)
@@ -214,7 +203,6 @@ function darkLightMode() {
         progressbar4.style.color = "darkblue"
         progressbar4.style.backgroundColor = "black"
 
-        toggleDarkMode()
     } else {
         darkLightButton.src = "darkmodeImage/darkmode.png"
         backGroundMe.style.backgroundImage = 'url("backgroundImage/3.png")';
@@ -229,7 +217,6 @@ function darkLightMode() {
         dropbtn2Text.style.backgroundColor = "lightblue"
         dropdownContentText.style.color = "black"
         dropdownContentText1.style.color = "black"
-        dropdownContentText2.style.color = "black"
         dropdownContentText3.style.color = "black"
 
         footer.style.color = "black"
