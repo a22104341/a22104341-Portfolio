@@ -914,6 +914,7 @@ article.qualities_etc .progressBars {
     }
 }
 
+
 @media only screen and(max-width: 600px) {
     .container {
         display: grid;

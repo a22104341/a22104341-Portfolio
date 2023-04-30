@@ -17,6 +17,7 @@ function darkLightMode(){
     const f4 = document.getElementById("f4")
     const date = document.getElementById("date")
 
+    
     /* EduPageStuff */
     const eduparallax = document.getElementById("eduparallax")
     const work = document.getElementById("work")
