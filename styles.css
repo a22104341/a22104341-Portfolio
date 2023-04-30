@@ -870,4 +870,33 @@ article.qualities_etc .progressBars {
     background-color: #297a38;
 }
 
-/* pseudo classes etc have been created in the other labs that are included in this portfolio and been adapted */
+/* pseudo classes etc. have been created in the other labs that are included in this portfolio and been adapted + > */
+
+.ProjectKeeper{
+    position: relative;
+
+}
+
+.Project1{ /* Mines */
+    display: flex;
+    position: absolute;
+    height: 550px;
+    width: 550px;
+    left: 15%;
+    
+}
+.Project2{ /* Eddie */
+    position: absolute;
+    height: 550px;
+    width: 550px;
+    right: 10%;
+    margin-top: -3%;
+    z-index: 2;
+}
+.Project3{ /* Grades */
+    position: absolute;
+    height: 650px;
+    width: 650px;
+    margin-left: 37%;
+    margin-top: 3%;
+}

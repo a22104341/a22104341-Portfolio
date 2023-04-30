@@ -99,7 +99,7 @@ function barMovements() {
     barMovement1()
     barMovement2()
     barMovement3()
-    setInterval(() => makePercentagesVisible(), 3900)
+    setInterval(() => makePercentagesVisible(), 3000)
 }
 
 function resetBar1() {
