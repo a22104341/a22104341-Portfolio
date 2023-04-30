@@ -47,6 +47,11 @@ body {
     height: 90vh;
 }
 
+#siteMAPPPP{
+    height: 85vh;
+    align-items: center;
+}
+
 @keyframes mouse_in {
     0% {
         cursor: url('cursor/1.png'), default;
@@ -396,73 +401,6 @@ article.qualities_etc .progressBars {
     max-width: calc(40% - .5em);
     background-color: lightblue;
     padding: .005em;
-}
-
-@media(max-width: 600px) {
-    .container {
-        display: grid;
-
-        grid-template-areas:
-            'nav'
-            'header'
-            'curso'
-            'phrase'
-            'main'
-            'skills'
-            'footer';
-
-        grid-template-columns: 1fr;
-
-
-
-    }
-
-    .container .curso {
-        font-size: 28px;
-    }
-
-    .backgroundME {
-        background-image: url("backgroundImage/phone 3.png");
-        background-repeat: no-repeat;
-        background-position: top;
-        background-size: cover;
-    }
-
-    article.qualities_etc {
-        height: 1000px;
-        width: 100%;
-        background-image: url("backgroundImage/Austria_White.png");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-        align-items: start;
-
-        margin-left: auto;
-        margin-right: auto;
-
-        text-align: center;
-    }
-
-    #eduparallax{
-        font-size: 25px;
-        height: 600px;
-    }
-
-    #dropbtn2 {
-        display: flex;
-        margin-right: 30%;
-    }
-
-    #contactStuff{
-        display: flex;
-        margin-left: 0;
-        padding: 0;
-        
-    }
-
-    
-
 }
 
 /* got a problem w the small background*/
@@ -923,13 +861,127 @@ article.qualities_etc .progressBars {
 #contactStuff{
     justify-content: center;
     justify-items: center;
-    padding: 15%;
+    padding: 18%;
     display: flex;
     flex-direction: column;
-    margin-left: 30%;
-    height: 500px;
+    display: block;
+    margin-left: 28%;
+    height: 70vh;
 }
 .container #feet{
-    position: absolute;
+    display: flex;
+    position: fixed;
     bottom: 0;
+}
+
+
+
+@media(max-width: 600px) {
+    .container {
+        display: grid;
+
+        grid-template-areas:
+            'nav'
+            'header'
+            'curso'
+            'phrase'
+            'main'
+            'skills'
+            'footer';
+
+        grid-template-columns: 1fr;
+
+
+
+    }
+
+    .container .curso {
+        font-size: 28px;
+    }
+
+    .backgroundME {
+        background-image: url("backgroundImage/phone 3.png");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+    }
+
+    article.qualities_etc {
+        height: 1000px;
+        width: 100%;
+        background-image: url("backgroundImage/Austria_White.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        align-items: start;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        text-align: center;
+    }
+
+    #eduparallax{
+        font-size: 25px;
+        height: 600px;
+    }
+
+    #dropbtn2 {
+        display: flex;
+        margin-right: 30%;
+    }
+
+    #contactStuff{ /* currently not working */
+        display: flex;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    #contactStuff{
+        justify-content: center;
+        justify-items: center;
+        font-size: large;
+        
+        display: flex;
+        flex-direction: column;
+        display: block;
+        margin-top: 25%;
+        margin-left: 30%;
+        height: 100vh;
+        font-size: 50px;
+    }
+    .container #feet{
+        display: flex;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .Project1{
+        height: 50px;
+        width: 50px;
+    }
+    .Project2{
+        height: 50px;
+        width: 50px;
+    }
+    .Project3{
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        left:0;
+    }
+
+    *{
+        font-size: 30px;
+    }
+
+    #siteMAPPPP{
+        
+    }
+
+    #leMapSite{
+        width: 10%;
+    }
+
 }
