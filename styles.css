@@ -287,6 +287,18 @@ article.qualities_etc {
     text-align: center;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* progressBars */
 article.qualities_etc .progressBars {
     box-sizing: border-box;
@@ -303,6 +315,29 @@ article.qualities_etc .progressBars {
 }
 
 .progressBar1::before {
+    content: attr(data-label);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: .25em;
+    top: .25em;
+    bottom: .25em;
+    width: calc(var(--width, 0) * 1%);
+    min-width: 2rem;
+    max-width: calc(100% - .5em);
+    background-color: lightblue;
+    padding: .005em;
+}
+
+.progressBars .progressBar4 {
+    position: relative;
+    width: 50%;
+    height: 2em;
+    background-color: white;
+    color: black;
+}
+
+.progressBar4::before {
     content: attr(data-label);
     display: flex;
     align-items: center;
@@ -638,7 +673,7 @@ article.qualities_etc .progressBars {
     z-index: 99999999999;
 }
 
-.container {
+.containerJAVA {
     position: relative;
     height: 100vh;
 }
@@ -835,3 +870,4 @@ article.qualities_etc .progressBars {
     background-color: #297a38;
 }
 
+/* pseudo classes etc have been created in the other labs that are included in this portfolio and been adapted */

@@ -17,8 +17,6 @@ function darkLightMode() {
     const f4 = document.getElementById("f4")
     const date = document.getElementById("date")
 
-
-
     if (darkLightButton.src.match("darkmodeImage/darkmode.png")) {
         darkLightButton.src = "darkmodeImage/lightmode.png"
         bodyText.style.color = "white"
@@ -38,7 +36,10 @@ function darkLightMode() {
         f3.style.color = "white"
         f4.src = "FooterImgs/Github_White.png"
         f5.style.color = "white"
-        toggleDarkMode()
+
+        bodyText.style.backgroundColor = "black"
+        bodyText.style.color = "white"
+
 
     } else {
         darkLightButton.src = "darkmodeImage/darkmode.png"
@@ -63,7 +64,8 @@ function darkLightMode() {
         f3.style.color = "black"
         f4.src = "FooterImgs/Github.png"
         f5.style.color = "black"
-
+        bodyText.style.backgroundColor = "white"
+        bodyText.style.color = "black"
 
     }
 }
@@ -139,7 +141,21 @@ document.getElementById("delete").addEventListener("click", () => {
 
 
 
+const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+svg.setAttribute("width", "200");
+svg.setAttribute("height", "200");
 
+const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+rect.setAttribute("x", "50");
+rect.setAttribute("y", "50");
+rect.setAttribute("width", "100");
+rect.setAttribute("height", "100");
+rect.setAttribute("stroke", "black");
+rect.setAttribute("stroke-width", "2");
+rect.setAttribute("fill", "yellow");
+
+svg.appendChild(rect);
+document.body.appendChild(svg);
 
 
 
