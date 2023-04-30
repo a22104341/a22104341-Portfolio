@@ -197,7 +197,7 @@ footer {
 
     background-color: lightblue;
     height: 60px;
-    width: 100vw;
+    width: 100%;
 
     border-style: solid;
     border-width: 1px;
@@ -511,10 +511,11 @@ article.qualities_etc .progressBars {
 }
 
 #ProgWeb {
-    display: grid;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     grid-template-areas:
         'lab news';
+    height: 100%;
 }
 
 #ProgWeb>div>a {
@@ -535,16 +536,44 @@ article.qualities_etc .progressBars {
     color: black;
 }
 
+#ProgWeb>div>div > a {
+    display: flex;
+    width: 250px;
+    height: px;
+    padding: 25px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    /* arredonda os cantos */
+    box-shadow: 5px 5px 15px grey;
+
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+#NewsText{
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-area: "news";
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%
+}
+
 #lab {
     grid-area: "lab";
 }
 
-#News {
+#News div{
     display: flex;
     grid-area: "news";
     flex-direction: row;
     flex-wrap: wrap;
-    width: 650px
+    width: 100%
 }
 
 #ProgWeb>div>div {
@@ -830,9 +859,9 @@ article.qualities_etc .progressBars {
 /* pseudo classes etc. have been created in the other labs that are included in this portfolio and been adapted + > */
 
 .ProjectKeeper{
-    position: grid;
-    width: 100vw;
-    height: 100lvh;
+    position: relative;
+    width: 100%;
+    height: 100vh;
 }
 
 .Project1{ /* Mines */
@@ -875,7 +904,15 @@ article.qualities_etc .progressBars {
     bottom: 0;
 }
 
+.LeNav{
+    width: 100%;
+}
 
+@media only screen and(max-width: 1485px) {
+    .NavCrack{
+        width: 100%;
+    }
+}
 
 @media only screen and(max-width: 600px) {
     .container {
@@ -891,9 +928,6 @@ article.qualities_etc .progressBars {
             'footer';
 
         grid-template-columns: 1fr;
-
-
-
     }
 
     .container .curso {
@@ -976,10 +1010,6 @@ article.qualities_etc .progressBars {
 
     *{
         font-size: 30px;
-    }
-
-    #siteMAPPPP{
-        
     }
 
     #leMapSite{

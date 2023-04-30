@@ -47,6 +47,11 @@ function darkLightMode(){
         /* EduPageStuff */
         eduparallax.style.background = 'url("backgroundImage/Austria_Dark.png")'
         work.style.background = 'url("backgroundImage/Education_Dark.png")'
+        work.style.backgroundAttachment = "fixed"
+        work.style.backgroundPosition = "center"
+        work.style.backgroundRepeat = "no-repeat"
+        work.style.backgroundSize = "cover"
+
     }else{
         darkLightButton.src = "darkmodeImage/darkmode.png"
         bodyText.style.color = "black"
@@ -76,6 +81,10 @@ function darkLightMode(){
         /* EduPageStuff */
         eduparallax.style.background = 'url("backgroundImage/Austria_White.png")'
         work.style.background = 'url("backgroundImage/Education.png")'
+        work.style.backgroundAttachment = "fixed"
+        work.style.backgroundPosition = "center"
+        work.style.backgroundRepeat = "no-repeat"
+        work.style.backgroundSize = "cover"
     }
 }
 
