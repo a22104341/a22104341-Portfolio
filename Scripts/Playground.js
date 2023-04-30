@@ -38,7 +38,7 @@ function darkLightMode() {
         f3.style.color = "white"
         f4.src = "FooterImgs/Github_White.png"
         f5.style.color = "white"
-
+        toggleDarkMode()
 
     } else {
         darkLightButton.src = "darkmodeImage/darkmode.png"
@@ -68,6 +68,21 @@ function darkLightMode() {
     }
 }
 
+const inputBox = document.getElementById('leTextBox');
+const sentenceOnTop = document.getElementById('sentenceOnTop');
+
+inputBox.addEventListener('input', () => {
+    const sentence = inputBox.value.slice(0, 20);
+    sentenceOnTop.textContent = sentence;
+});
+
+inputBox.addEventListener('keydown', (event) => {
+    if (inputBox.value.length >= 20 && event.key !== 'Backspace') {
+        event.preventDefault();
+    }
+});
+
+
 const inputName = document.getElementById('input-name');
 const outputNames = document.querySelectorAll('.output-name');
 
@@ -96,6 +111,36 @@ circle.onmouseout = function () {
 circle.onmouseover = function () {
     circle.style.animationPlayState = 'paused';
 }
+
+
+
+// Calculator functions
+const inputMath = document.getElementById("inputMath");
+
+document.querySelectorAll(".number").forEach(button => {
+    button.addEventListener("click", () => {
+        inputMath.value += button.value;
+    });
+});
+
+document.querySelectorAll(".operator").forEach(button => {
+    button.addEventListener("click", () => {
+        inputMath.value += button.value;
+    });
+});
+
+document.getElementById("equal").addEventListener("click", () => {
+    inputMath.value = eval(inputMath.value);
+});
+
+document.getElementById("delete").addEventListener("click", () => {
+    inputMath.value = inputMath.value.slice(0, -1);
+});
+
+
+
+
+
 
 
 

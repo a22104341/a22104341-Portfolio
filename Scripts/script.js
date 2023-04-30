@@ -1,91 +1,91 @@
 /* Languages*/
-function makePercentageVisible(){
+function makePercentageVisible() {
     const text = document.getElementsByClassName("percentage")[0];
     text.style.opacity = "1";
 }
-function makePercentageVisible1(){
+function makePercentageVisible1() {
     const text = document.getElementsByClassName("percentage")[1];
     text.style.opacity = "1";
 }
-function makePercentageVisible2(){
+function makePercentageVisible2() {
     const text = document.getElementsByClassName("percentage")[2];
     text.style.opacity = "1";
 }
-function makePercentageVisible3(){
+function makePercentageVisible3() {
     const text = document.getElementsByClassName("percentage")[3];
     text.style.opacity = "1";
 }
-function makePercentagesVisible(){
+function makePercentagesVisible() {
     makePercentageVisible()
     makePercentageVisible1()
     makePercentageVisible2()
     makePercentageVisible3()
 }
 
-function makePercentageInvisible(){
+function makePercentageInvisible() {
     const text = document.getElementsByClassName("percentage")[0];
     text.style.opacity = "0";
 }
-function makePercentageInvisible1(){
+function makePercentageInvisible1() {
     const text = document.getElementsByClassName("percentage")[1];
     text.style.opacity = "0";
 }
-function makePercentageInvisible2(){
+function makePercentageInvisible2() {
     const text = document.getElementsByClassName("percentage")[2];
     text.style.opacity = "0";
 }
-function makePercentageInvisible3(){
+function makePercentageInvisible3() {
     const text = document.getElementsByClassName("percentage")[3];
     text.style.opacity = "0";
 }
-function makePercentagesInvisible(){
+function makePercentagesInvisible() {
     makePercentageInvisible()
     makePercentageInvisible1()
     makePercentageInvisible2()
     makePercentageInvisible3()
 }
 
-function barMovement(){
+function barMovement() {
     const progressBar = document.getElementsByClassName
-    ("progressBar1")[0]
+        ("progressBar1")[0]
     setInterval(() => {
         const computedStyle = getComputedStyle(progressBar)
         const width = parseFloat(computedStyle.getPropertyValue
             ("--width")) || 0
-            progressBar.style.setProperty("--width", width + .1)
+        progressBar.style.setProperty("--width", width + .1)
     }, 4)
 }
-function barMovement1(){
+function barMovement1() {
     const progressBar = document.getElementsByClassName
-    ("progressBar1")[1]
+        ("progressBar1")[1]
     setInterval(() => {
         const computedStyle = getComputedStyle(progressBar)
         const width = parseFloat(computedStyle.getPropertyValue
             ("--width")) || 0
-            progressBar.style.setProperty("--width", width + .1)
+        progressBar.style.setProperty("--width", width + .1)
     }, 4)
 }
-function barMovement2(){
+function barMovement2() {
     const progressBar = document.getElementsByClassName
-    ("progressBar2")[0]
+        ("progressBar2")[0]
     setInterval(() => {
         const computedStyle = getComputedStyle(progressBar)
         const width = parseFloat(computedStyle.getPropertyValue
             ("--width")) || 0
-            progressBar.style.setProperty("--width", width + .1)
+        progressBar.style.setProperty("--width", width + .1)
     }, 4)
 }
-function barMovement3(){
+function barMovement3() {
     const progressBar = document.getElementsByClassName
-    ("progressBar3")[0]
+        ("progressBar3")[0]
     setInterval(() => {
         const computedStyle = getComputedStyle(progressBar)
         const width = parseFloat(computedStyle.getPropertyValue
             ("--width")) || 0
-            progressBar.style.setProperty("--width", width + .1)
+        progressBar.style.setProperty("--width", width + .1)
     }, 7)
 }
-function barMovements(){
+function barMovements() {
     let date = document.getElementById("date")
     date.innerHTML = new Date().getFullYear();
 
@@ -94,66 +94,66 @@ function barMovements(){
     barMovement1()
     barMovement2()
     barMovement3()
-    setInterval(() => makePercentagesVisible(),3900)
+    setInterval(() => makePercentagesVisible(), 3900)
 }
 
 
-function resetBar(){ /*fix this somehow */ /* THIS WORKS */
-// Get a reference to the last interval + 1
-const interval_id = window.setInterval(function(){}, Number.MAX_SAFE_INTEGER);
+function resetBar() { /*fix this somehow */ /* THIS WORKS */
+    // Get a reference to the last interval + 1
+    const interval_id = window.setInterval(function () { }, Number.MAX_SAFE_INTEGER);
 
-// Clear any timeout/interval up to that id
-for (let i = 1; i < interval_id; i++) {
-  window.clearInterval(i);
-}
+    // Clear any timeout/interval up to that id
+    for (let i = 1; i < interval_id; i++) {
+        window.clearInterval(i);
+    }
     const progressBar = document.getElementsByClassName
-    ("progressBar1")[0]
+        ("progressBar1")[0]
 
-        const computedStyle = getComputedStyle(progressBar)
-        const width = parseFloat(computedStyle.getPropertyValue
-            ("--width")) || 0
-            progressBar.style.setProperty("--width", computedStyle)
+    const computedStyle = getComputedStyle(progressBar)
+    const width = parseFloat(computedStyle.getPropertyValue
+        ("--width")) || 0
+    progressBar.style.setProperty("--width", computedStyle)
 
 }
 
-function resetBar1(){ /*fix this somehow */
+function resetBar1() { /*fix this somehow */
     const progressBar = document.getElementsByClassName
-    ("progressBar1")[1]
+        ("progressBar1")[1]
     setInterval(() => {
         const computedStyle = getComputedStyle(progressBar)
         const width = parseFloat(computedStyle.getPropertyValue
             ("--width")) || 0
-            progressBar.style.setProperty("--width", computedStyle)
+        progressBar.style.setProperty("--width", computedStyle)
     })
 }
-function resetBar2(){ /*fix this somehow */
+function resetBar2() { /*fix this somehow */
     const progressBar = document.getElementsByClassName
-    ("progressBar2")[0]
+        ("progressBar2")[0]
     setInterval(() => {
         const computedStyle = getComputedStyle(progressBar)
         const width = parseFloat(computedStyle.getPropertyValue
             ("--width")) || 0
-            progressBar.style.setProperty("--width", computedStyle)
+        progressBar.style.setProperty("--width", computedStyle)
     })
 }
-function resetBar3(){ /*fix this somehow */
+function resetBar3() { /*fix this somehow */
     const progressBar = document.getElementsByClassName
-    ("progressBar3")[0]
+        ("progressBar3")[0]
     setInterval(() => {
         const computedStyle = getComputedStyle(progressBar)
         const width = parseFloat(computedStyle.getPropertyValue
             ("--width")) || 0
-            progressBar.style.setProperty("--width", computedStyle)
+        progressBar.style.setProperty("--width", computedStyle)
     })
 }
-function resetBars(){
+function resetBars() {
     resetBar()
     resetBar1()
     resetBar2()
     resetBar3()
 }
 
-function darkLightMode(){
+function darkLightMode() {
     const darkLightButton = document.getElementById("darkLight")
 
     const backGroundMe = document.getElementById("backgroundME")
@@ -186,8 +186,7 @@ function darkLightMode(){
     const progressbar2 = document.getElementById("progressbar2")
     const progressbar3 = document.getElementById("progressbar3")
 
-    if(darkLightButton.src.match("darkmodeImage/darkmode.png"))
-    {
+    if (darkLightButton.src.match("darkmodeImage/darkmode.png")) {
         darkLightButton.src = "darkmodeImage/lightmode.png"
         backGroundMe.style.backgroundImage = 'url("backgroundImage/1.png")';
         austria.style.backgroundImage = 'url("backgroundImage/Austria_Dark.png")'
@@ -212,7 +211,7 @@ function darkLightMode(){
         phrase.style.backgroundColor = "darkblue"
         phraseButton.style.backgroundColor = "turquoise"
         phraseButtonText.style.color = "black"
-        phraseButtonText.style.fontWeight ="bold"
+        phraseButtonText.style.fontWeight = "bold"
 
         lang.style.color = "white"
         progLang.style.color = "white"
@@ -227,7 +226,9 @@ function darkLightMode(){
         progressbar3.style.backgroundColor = "black"
         progressbar4.style.color = "darkblue"
         progressbar4.style.backgroundColor = "black"
-    }else{
+
+        toggleDarkMode()
+    } else {
         darkLightButton.src = "darkmodeImage/darkmode.png"
         backGroundMe.style.backgroundImage = 'url("backgroundImage/3.png")';
         austria.style.backgroundImage = 'url("backgroundImage/Austria_White.png")'
@@ -255,7 +256,7 @@ function darkLightMode(){
         phrase.style.backgroundColor = "lightblue"
         phraseButton.style.backgroundColor = "black"
         phraseButtonText.style.color = "white"
-        phraseButtonText.style.fontWeight ="normal"
+        phraseButtonText.style.fontWeight = "normal"
 
         lang.style.color = "black"
         progLang.style.color = "black"
@@ -273,7 +274,5 @@ function darkLightMode(){
 
     }
 }
-
-
 
 

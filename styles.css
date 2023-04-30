@@ -697,17 +697,141 @@ article.qualities_etc .progressBars {
     border-radius: 50%;
     background-color: red;
     animation: roll 10s linear infinite;
-  }
-  
-  @keyframes roll {
+}
+
+@keyframes roll {
     0% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
+
     50% {
-      transform: translateX(calc(100vw - 50px));
+        transform: translateX(calc(100vw - 50px));
     }
+
     100% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-  }
-  
+}
+
+
+
+
+
+
+
+.calculator {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    padding: 20px;
+    width: 400px;
+}
+
+.inputMath {
+    background-color: #f3f3f3;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #333;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: right;
+    width: 100%;
+}
+
+.number {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 80px;
+}
+
+.number:hover {
+    background-color: #3e8e41;
+}
+
+.number:active {
+    background-color: #297a38;
+}
+
+.operator {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 80px;
+}
+
+.operator:hover {
+    background-color: #3e8e41;
+}
+
+.operator:active {
+    background-color: #297a38;
+}
+
+.equal {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 80px;
+}
+
+.equal:hover {
+    background-color: #3e8e41;
+}
+
+.equal:active {
+    background-color: #297a38;
+}
+
+.delete {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    margin-right: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 80px;
+}
+
+.delete:hover {
+    background-color: #3e8e41;
+}
+
+.delete:active {
+    background-color: #297a38;
+}
+
