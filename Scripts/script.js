@@ -205,9 +205,7 @@ function darkLightMode() {
         progressbar4.style.color = "darkblue"
         progressbar4.style.backgroundColor = "black"
 
-
-        /*sessionStorage.setItem("darkmode", true)*/
-
+        toggleDarkMode();
     } else {
         darkLightButton.src = "darkmodeImage/darkmode.png"
         backGroundMe.style.backgroundImage = 'url("backgroundImage/3.png")';
@@ -251,13 +249,31 @@ function darkLightMode() {
         progressbar4.style.color = "black"
         progressbar4.style.backgroundColor = "white"
 
-        /*sessionStorage.setItem("darkmode", false)*/
+
+        toggleDarkMode();
     }
 }
-/*
-window.onload= function(){
-    if(sessionStorage.getItem("darkmode")){
-        darkLightMode();
-    }
-}*/
 
+function applyDarkMode() {
+    if (localStorage.getItem('darkMode')) {
+        // User has enabled dark mode previously
+        darkLightMode();
+        document.body.classList.add('dark-mode');
+    }
+}
+
+window.onload = function () {
+    applyDarkMode();
+};
+
+function toggleDarkMode() {
+    var body = document.body;
+    body.classList.toggle('dark-mode');
+
+    // Save user's preference in localStorage
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', true);
+    } else {
+        localStorage.removeItem('darkMode');
+    }
+}

@@ -40,7 +40,7 @@ function darkLightMode() {
         bodyText.style.backgroundColor = "black"
         bodyText.style.color = "white"
 
-
+        toggleDarkMode();
     } else {
         darkLightButton.src = "darkmodeImage/darkmode.png"
         bodyText.style.color = "black"
@@ -66,6 +66,7 @@ function darkLightMode() {
         bodyText.style.backgroundColor = "white"
         bodyText.style.color = "black"
 
+        toggleDarkMode();
     }
 }
 
@@ -157,5 +158,29 @@ svg.appendChild(rect);
 document.body.appendChild(svg);
 
 
+
+function applyDarkMode() {
+    if (localStorage.getItem('darkMode')) {
+        // User has enabled dark mode previously
+        darkLightMode();
+        document.body.classList.add('dark-mode');
+    }
+}
+
+window.onload = function () {
+    applyDarkMode();
+};
+
+function toggleDarkMode() {
+    var body = document.body;
+    body.classList.toggle('dark-mode');
+
+    // Save user's preference in localStorage
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', true);
+    } else {
+        localStorage.removeItem('darkMode');
+    }
+}
 
 

@@ -1,4 +1,4 @@
-function darkLightMode(){
+function darkLightMode() {
     const darkLightButton = document.getElementById("darkLight")
 
     const bodyText = document.getElementById("body")
@@ -21,8 +21,7 @@ function darkLightMode(){
     const eduparallax = document.getElementById("eduparallax")
     const work = document.getElementById("work")
 
-    if(darkLightButton.src.match("darkmodeImage/darkmode.png"))
-    {
+    if (darkLightButton.src.match("darkmodeImage/darkmode.png")) {
         darkLightButton.src = "darkmodeImage/lightmode.png"
         bodyText.style.color = "white"
 
@@ -44,7 +43,9 @@ function darkLightMode(){
 
         bodyText.style.backgroundColor = "black"
 
-    }else{
+        toggleDarkMode();
+
+    } else {
         darkLightButton.src = "darkmodeImage/darkmode.png"
         bodyText.style.color = "black"
 
@@ -70,16 +71,42 @@ function darkLightMode(){
 
         bodyText.style.backgroundColor = "white"
         bodyText.style.color = "black"
+
+        toggleDarkMode();
     }
 }
 
-function thisDefoSendsTrust(){
+function thisDefoSendsTrust() {
     const nameTing = document.getElementById("nameTing")
     const emailTing = document.getElementById("emailTing")
     const messageTing = document.getElementById("messageTing")
     nameTing.innerHTML = ""
     emailTing.innerHTML = ""
     messageTing.innerHTML = ""
-    
+
     alert("Email has been sent")
+}
+
+function applyDarkMode() {
+    if (localStorage.getItem('darkMode')) {
+        // User has enabled dark mode previously
+        darkLightMode();
+        document.body.classList.add('dark-mode');
+    }
+}
+
+window.onload = function () {
+    applyDarkMode();
+};
+
+function toggleDarkMode() {
+    var body = document.body;
+    body.classList.toggle('dark-mode');
+
+    // Save user's preference in localStorage
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', true);
+    } else {
+        localStorage.removeItem('darkMode');
+    }
 }

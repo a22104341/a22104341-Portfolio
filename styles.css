@@ -830,8 +830,9 @@ article.qualities_etc .progressBars {
 /* pseudo classes etc. have been created in the other labs that are included in this portfolio and been adapted + > */
 
 .ProjectKeeper{
-    position: relative;
-
+    position: grid;
+    width: 100vw;
+    height: 100lvh;
 }
 
 .Project1{ /* Mines */
@@ -876,7 +877,7 @@ article.qualities_etc .progressBars {
 
 
 
-@media(max-width: 600px) {
+@media only screen and(max-width: 600px) {
     .container {
         display: grid;
 
@@ -970,6 +971,7 @@ article.qualities_etc .progressBars {
         width: 50px;
         position: absolute;
         left:0;
+        
     }
 
     *{

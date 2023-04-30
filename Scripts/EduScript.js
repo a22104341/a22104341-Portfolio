@@ -42,7 +42,7 @@ function darkLightMode(){
         f4.src = "FooterImgs/Github_White.png"
         f5.style.color = "white"
 
-        /*sessionStorage.setItem("darkmode", false)*/
+        toggleDarkMode()
 
         /* EduPageStuff */
         eduparallax.style.background = 'url("backgroundImage/Austria_Dark.png")'
@@ -71,7 +71,7 @@ function darkLightMode(){
         f4.src = "FooterImgs/Github.png"
         f5.style.color = "black"
 
-        /*sessionStorage.setItem("darkmode", true)*/
+        toggleDarkMode()
 
         /* EduPageStuff */
         eduparallax.style.background = 'url("backgroundImage/Austria_White.png")'
@@ -81,8 +81,35 @@ function darkLightMode(){
 
 
 
+
+
 /*window.onload= function(){
     if(sessionStorage.getItem("darkmode")){
         darkLightMode();
     }
 }*/
+
+function applyDarkMode() {
+    if (localStorage.getItem('darkMode')) {
+      // User has enabled dark mode previously
+      darkLightMode();
+      document.body.classList.add('dark-mode');
+    }
+  }
+  
+  window.onload = function() {
+    applyDarkMode();
+  };
+
+  function toggleDarkMode() {
+    var body = document.body;
+    body.classList.toggle('dark-mode');
+    
+    // Save user's preference in localStorage
+    if (body.classList.contains('dark-mode')) {
+      localStorage.setItem('darkMode', true);
+    } else {
+      localStorage.removeItem('darkMode');
+    }
+  }
+  
